@@ -8,8 +8,8 @@ export default function Awards() {
   const { awards } = data;
   const [filter, setFilter] = useState("All");
 
-  const categories = ["All", ...Array.from(new Set(awards.map(a => a.category)))];
-  const filteredAwards = filter === "All" ? awards : awards.filter(a => a.category === filter);
+  const categories = ["All", ...Array.from(new Set(awards ? awards.filter(a => a && a.category).map(a => a.category) : []))];
+  const filteredAwards = filter === "All" ? (awards || []) : (awards || []).filter(a => a && a.category === filter);
 
   return (
     <div className="pt-32 pb-24 px-6 md:px-12 bg-white min-h-screen">

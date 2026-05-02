@@ -10,8 +10,8 @@ export default function About() {
   const { education, awards, experience, profile } = data;
   const [awardFilter, setAwardFilter] = useState<string>("All");
 
-  const awardCategories = ["All", ...Array.from(new Set(awards.map(a => a.category)))];
-  const filteredAwards = awardFilter === "All" ? awards : awards.filter(a => a.category === awardFilter);
+  const awardCategories = ["All", ...Array.from(new Set((awards || []).filter(a => a && a.category).map(a => a.category)))];
+  const filteredAwards = awardFilter === "All" ? (awards || []) : (awards || []).filter(a => a && a.category === awardFilter);
 
   return (
     <div className="pt-32 pb-24 px-6 md:px-12 bg-white">

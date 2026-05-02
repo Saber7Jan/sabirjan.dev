@@ -7,8 +7,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
 
   return {
-    // THIS IS THE MOST IMPORTANT CHANGE
-    base: '/sabirjan.dev/',        // Must match your repo name exactly + trailing slash
+    base: '/sabirjan.dev/',     // ← Must be this exact value
 
     plugins: [react(), tailwindcss()],
 
@@ -20,10 +19,6 @@ export default defineConfig(({ mode }) => {
       alias: {
         '@': path.resolve(__dirname, '.'),
       },
-    },
-
-    server: {
-      hmr: process.env.DISABLE_HMR !== 'true',
     },
   };
 });

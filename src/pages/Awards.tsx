@@ -100,7 +100,7 @@ export default function Awards() {
                 
                 {/* Background Number */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-display text-[15rem] font-black text-black/[0.02] group-hover:text-white/[0.02] select-none pointer-events-none transition-colors">
-                  {award.year.slice(-2)}
+                  {award.year ? award.year.slice(-2) : "00"}
                 </div>
               </motion.div>
             ))}

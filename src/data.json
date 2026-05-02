@@ -36,7 +36,7 @@
       "status": "COMPLETED",
       "assets": [
         { "name": "Final Thesis", "url": "/assets/FYP_Thesis_SP25-37.pdf" },
-        { "name": "Research Paper", "url": "/assets/FYP_Research Paper SP25-37.pdf" },
+        { "name": "Research Paper", "url": "/assets/FYP_Research_Paper_SP25-37.pdf" },
         { "name": "Presentation Slides", "url": "/assets/FYP_EXTERNAL_2_FINAL.pdf" },
         { "name": "Research Poster", "url": "/assets/EmotiFi_Poster.pdf" },
         { "name": "Career Expo Dossier", "url": "/assets/FYP_Career_Expo.pdf" }
@@ -102,7 +102,7 @@
       "image": "/assets/Aurora_Thumb.svg",
       "status": "COMPLETED",
       "assets": [
-        { "name": "Project Report", "url": "/assets/Project Report LFR.pdf" }
+        { "name": "Project Report", "url": "/assets/Project_Report_LFR.pdf" }
       ],
       "gallery": []
     }
@@ -323,6 +323,14 @@
       "org": "ITREB",
       "description": "Certification in Basic Principles of Tajveed.",
       "certificate": "/assets/Basic_Principles_of_Tajveed_2013.jpeg"
+    },
+    {
+      "year": "2014",
+      "title": "Runner Up Football",
+      "category": "Sports",
+      "org": "Interschool Sports",
+      "description": "Silver medal in regional football championship.",
+      "certificate": "/assets/Runner_Up_Football_2014.jpeg"
     }
   ],
   "skills": [

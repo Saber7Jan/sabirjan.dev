@@ -54,20 +54,21 @@ export function AIAssistant() {
 
     try {
       const ai = getAI();
+      const model = ai.getGenerativeModel({ 
+        model: modelName,
+        systemInstruction: SYSTEM_PROMPT
+      });
+
       const history = messages.map(m => ({
         role: m.role === 'user' ? 'user' : 'model',
         parts: [{ text: m.text }]
       }));
 
-      const response = await ai.models.generateContent({
-        model: modelName,
-        contents: [...history, { role: 'user', parts: [{ text: userMsg }] }],
-        config: {
-          systemInstruction: SYSTEM_PROMPT
-        }
+      const result = await model.generateContent({
+        contents: [...history, { role: 'user', parts: [{ text: userMsg }] }]
       });
       
-      const responseText = response.text || "Connection handshake failed. Please retry.";
+      const responseText = result.response.text() || "Connection handshake failed. Please retry.";
       setMessages(prev => [...prev, { role: 'ai', text: responseText }]);
     } catch (error) {
       console.error("AI Error:", error);

@@ -1,0 +1,216 @@
+/* ==========================================
+   Sabir Jan Portfolio - AI + Creative Tech
+   Minimal + Modern + Subtle Creative Accent
+   ========================================== */
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: #1e293b;           /* slate-800 */
+  background-color: #f8fafc; /* slate-50 */
+  min-height: 100vh;
+}
+
+a {
+  color: #3b82f6;           /* blue-500 */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #2563eb;           /* blue-600 */
+}
+
+/* Navigation */
+.navbar {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: white !important;
+}
+
+.nav-link {
+  color: #e2e8f0 !important;
+  font-weight: 500;
+  margin: 0 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #60a5fa !important;
+  transform: translateY(-2px);
+}
+
+/* Sections */
+section {
+  padding: 5rem 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  border-radius: 2px;
+}
+
+/* About Section */
+#about {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  padding: 3rem;
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #3b82f6;
+  box-shadow: 0 10px 30px rgba(59,130,246,0.25);
+  margin-bottom: 1.5rem;
+}
+
+/* Cards (Projects, Awards, Education) */
+.card {
+  background: white;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.card-header {
+  background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+  color: white;
+  padding: 1.25rem 1.5rem;
+  font-weight: 600;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Project specific */
+.project-card {
+  border-left: 5px solid #8b5cf6;
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.project-tech {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 0.75rem;
+}
+
+/* Charts & Visuals */
+canvas {
+  max-width: 100%;
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  margin: 2rem 0;
+}
+
+/* Awards Filter */
+#award-filter {
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  width: 300px;
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Buttons */
+.btn-primary {
+  background: #3b82f6;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  section {
+    padding: 3rem 1rem;
+  }
+  .navbar {
+    padding: 1rem;
+  }
+  .nav-link {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Dark Mode (optional - toggle via JS later) */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #0f172a;
+    color: #e2e8f0;
+  }
+  .card, .card-body {
+    background: #1e293b;
+    color: #e2e8f0;
+  }
+  h1, h2, h3 {
+    color: #f1f5f9;
+  }
+  canvas {
+    background: #1e293b;
+  }
+}

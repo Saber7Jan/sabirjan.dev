@@ -1,0 +1,344 @@
+{
+  "profile": {
+    "name": "Sabir Jan",
+    "title": "AI/ML Researcher & Creative Technologist",
+    "roles": [
+      "AI/ML Researcher",
+      "Interactive Artist",
+      "Creative Technologist",
+      "Emotion-Aware Systems Builder"
+    ],
+    "bio": "Blends deep learning, Wi-Fi CSI emotion recognition, and cultural dance choreography for human-centered AI. Computer Engineering graduate from COMSATS, focusing on privacy-first affective computing.",
+    "email": "saber8ronaldo@gmail.com",
+    "location": "Islamabad, Pakistan",
+    "socials": {
+      "github": "https://github.com/Saber7Jan",
+      "linkedin": "https://www.linkedin.com/in/sabirjan-ai/",
+      "archive": "https://www.instagram.com/janbroz78",
+      "youtube": "https://youtube.com/@SabirJan",
+      "cv": "./assets/SABIR_CV.pdf",
+      "english_proficiency": "./assets/English_language_Certificate.pdf",
+      "hope_certificate": "./assets/Hope_Certificate.pdf"
+    },
+    "image": "./assets/Profile_Picture.jpg"
+  },
+  "projects": [
+    {
+      "id": "emotifi",
+      "title": "EmotiFi: Wi-Fi CSI Emotion Recognition",
+      "subtitle": "Final Year Research Project",
+      "description": "Contactless emotion recognition using ESP32 Wi-Fi CSI. Implemented ResNet-18 and EfficientNetV2B0 with 85%+ accuracy.",
+      "longDescription": "EmotiFi is a cutting-edge research project that leverages Wi-Fi Channel State Information (CSI) to detect human emotions without wearable sensors. By analyzing the distortions in Wi-Fi signals caused by human presence and movement, the system extracts unique biometric signatures. We implemented deep learning models including ResNet-18 and EfficientNetV2B0 to classify emotions into categories like Joy, Stress, and Neutral. The project emphasizes privacy-first affective computing, ensuring that emotional data can be captured without the need for intrusive cameras or microphones.",
+      "tech": ["Python", "TensorFlow", "ESP32", "Signal Processing"],
+      "fullTech": ["Python", "TensorFlow", "Keras", "ESP32", "Signal Processing", "CSI Tool", "PyTorch"],
+      "link": "https://github.com/Saber7Jan/EmotiFi",
+      "image": "./assets/Emotifi_Thumb.svg",
+      "status": "COMPLETED",
+      "assets": [
+        { "name": "Final Thesis", "url": "./assets/FYP_Thesis_SP25-37.pdf" },
+        { "name": "Research Paper", "url": "./assets/FYP_Research_Paper_SP25-37.pdf" },
+        { "name": "Presentation Slides", "url": "./assets/FYP_EXTERNAL_2_FINAL.pdf" },
+        { "name": "Research Poster", "url": "./assets/EmotiFi_Poster.pdf" },
+        { "name": "Career Expo Dossier", "url": "./assets/FYP_Career_Expo.pdf" }
+      ],
+      "gallery": [
+        { "type": "image", "url": "./assets/Emotifi_Thumb.svg", "caption": "System Architecture" },
+        { "type": "image", "url": "https://images.unsplash.com/photo-1558486012-817176f84c6d?auto=format&fit=crop&q=80&w=2000", "caption": "Signal Analysis" }
+      ]
+    },
+    {
+      "id": "danreality",
+      "title": "DanReality: Heritage Dance AI",
+      "subtitle": "Creative Tech // Cultural Arts",
+      "description": "Fusion of Gilgit-Baltistan heritage dance and AI for mental wellness, involving real-time gesture feedback and affective synchronization.",
+      "longDescription": "DanReality (also known as JanBroz) is an experimental research project. JanBroz is the dedicated creative technology and artist channel of Sabir and his twin brother, featuring immersive performance videos and AI integrations. The project uses computer vision (MediaPipe) to track traditional dance movements in real-time, providing feedback on posture, rhythm, and emotional expression. It features immersive backgrounds that react to the dancer's intensity and mood, exploring therapeutic interventions through cultural arts.",
+      "tech": ["Unity", "MediaPipe", "React", "Node.js"],
+      "fullTech": ["Unity 3D", "MediaPipe", "React", "Node.js", "Socket.io", "Three.js", "Blender"],
+      "link": "https://github.com/Saber7Jan/JanBroz",
+      "image": "./assets/DanReality_Thumb.svg",
+      "status": "IN_PROGRESS",
+      "assets": [
+        { "name": "Research Thesis", "url": "./assets/FYP_Thesis_SP25-37.pdf" },
+        { "name": "Technical Report", "url": "./assets/DanReality.pdf" },
+        { "name": "Pitch Deck", "url": "./assets/DanReality_PitchDeck.pdf" },
+        { "name": "Performance Video", "url": "./assets/JanBroz_Performance.mp4" },
+        { "name": "Live Artist Website", "url": "https://saber7jan.github.io/JanBroz/" },
+        { "name": "JanBroz Repository", "url": "https://github.com/Saber7Jan/JanBroz" }
+      ],
+      "gallery": [
+        { "type": "video", "url": "./assets/JanBroz_Performance.mp4", "caption": "Live Performance @ K-Pop World Festival" },
+        { "type": "image", "url": "./assets/DanReality_Thumb.svg", "caption": "Interaction Mockup" }
+      ]
+    },
+    {
+      "id": "aurora",
+      "title": "Aurora AI Assistant",
+      "subtitle": "RAG Chatbot // Research",
+      "description": "Knowledge-enhanced mental health chatbot using ChromaDB and Gemini API. Implements crisis-safe response logic.",
+      "longDescription": "Aurora is a Retrieval-Augmented Generation (RAG) system designed for mental health support and research analysis. Built with LangChain and the Gemini API, it retrieves information from a curated database of clinical research (ChromaDB) to provide multi-perspective, evidence-based answers. The assistant features an agentic orchestration layer that can switch between general support, research analysis, and emergency crisis detection.",
+      "tech": ["LangChain", "Gemini API", "FastAPI", "VectorDBs"],
+      "fullTech": ["LangChain", "Google Gemini API", "FastAPI", "ChromaDB", "Python", "React", "Tailwind CSS"],
+      "link": "https://github.com/Saber7Jan/Aurora",
+      "image": "./assets/Aurora_Thumb.svg",
+      "status": "LIVE_DEPLOYED",
+      "assets": [
+        { "name": "Live Demo", "url": "https://aurora-ai-demo.vercel.app" },
+        { "name": "Technical Report", "url": "./assets/Aurora_Report.pdf" }
+      ],
+      "gallery": [
+        { "type": "image", "url": "./assets/Aurora_Thumb.svg", "caption": "User Interface" },
+        { "type": "image", "url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=2000", "caption": "RAG Architecture" }
+      ]
+    },
+    {
+      "id": "lfr-robot",
+      "title": "Line Following Robot",
+      "subtitle": "Embedded Systems // PID Control",
+      "description": "Autonomous robot utilizing infra-red sensors and PID control for high-speed line tracking and obstacle avoidance.",
+      "longDescription": "A robust embedded systems project featuring a line-following robot capable of navigating complex tracks with variable speeds. Implemented using Arduino/C++, featuring real-time sensor calibration and optimized control loops (PID).",
+      "tech": ["Arduino", "C++", "Sensors", "Control Theory"],
+      "fullTech": ["Arduino Uno", "L298N Driver", "IR Sensors", "PID Control", "Embedded C++"],
+      "link": "#",
+      "image": "./assets/Aurora_Thumb.svg",
+      "status": "COMPLETED",
+      "assets": [
+        { "name": "Project Report", "url": "./assets/Project_Report_LFR.pdf" }
+      ],
+      "gallery": []
+    }
+  ],
+  "experience": [
+    {
+      "company": "Kartoa Technologies",
+      "role": "AI Development Intern",
+      "period": "Aug 2025 - Nov 2025",
+      "details": [
+        "Developed AI solutions using Python, LangChain, and LangGraph.",
+        "Implemented RAG-based systems for knowledge retrieval.",
+        "Optimized ML models for production deployment."
+      ],
+      "location": "Remote"
+    },
+    {
+      "company": "Adan AI",
+      "role": "AI Research Intern",
+      "period": "Jun 2024 - Aug 2024",
+      "details": [
+        "Conducted research on computer vision models for human pose estimation.",
+        "Assisted in gathering datasets for emotion recognition research.",
+        "Verified model performance against benchmark datasets."
+      ],
+      "location": "Islamabad, PK",
+      "certificate": "./assets/Internship_Adan_AI.pdf"
+    }
+  ],
+  "education": [
+    {
+      "institution": "COMSATS University Islamabad",
+      "degree": "BS in Computer Engineering",
+      "period": "2020 - 2024",
+      "details": "Major in AI & ML. Recipient of EHSAAS Undergraduate Scholarship. CGPA 3.4/4.0.",
+      "location": "Islamabad, PK",
+      "transcript": "./assets/COMSATS_Transcript.pdf",
+      "resultCard": "./assets/Sabir_BS_CE_Result_Card.pdf",
+      "characterCertificate": "./assets/Character_Certificate.jpg"
+    },
+    {
+      "institution": "Aga Khan Higher Secondary School",
+      "degree": "HSSC (Pre-Engineering)",
+      "period": "2018 - 2020",
+      "details": "Grade A-1 (921/1100). Concentrated in Advanced Mathematics and Physics.",
+      "location": "Karachi, PK",
+      "certificate": "./assets/HSSC_Certificate.pdf",
+      "transcript": "./assets/HSSC_Transcript.jpg"
+    },
+    {
+      "institution": "The Aga Khan School, Garden",
+      "degree": "SSC (Science)",
+      "period": "2016 - 2018",
+      "details": "Metriculation with honors.",
+      "location": "Karachi, PK",
+      "certificate": "./assets/SSC_Certificate.jpg",
+      "transcript": "./assets/SSC_Transcript.jpg"
+    }
+  ],
+  "awards": [
+    {
+      "year": "2024",
+      "title": "K-pop World Festival (3rd Prize)",
+      "category": "Performance",
+      "org": "Embassy of Republic of Korea",
+      "description": "Regional qualifying tournament performance involving Jan Broz (DanReality).",
+      "certificate": "./assets/KPOP_Certificate.jpeg"
+    },
+    {
+      "year": "2023",
+      "title": "Best Dramatics Member",
+      "category": "Arts",
+      "org": "COMSATS Dramatics Society",
+      "description": "Exceptional contribution to theatrical performances and community building.",
+      "certificate": "./assets/CSC_Dramatics_Best_Member.png"
+    },
+    {
+      "year": "2023",
+      "title": "Best Performer",
+      "category": "Arts",
+      "org": "CSC FIESTA (COMSATS)",
+      "description": "Awarded for outstanding cultural performance representing the university.",
+      "certificate": "./assets/CSC_Best_Performer_Fiesta.png"
+    },
+    {
+      "year": "2021",
+      "title": "EHSAAS Undergraduate Scholarship",
+      "category": "Academic",
+      "org": "Government of Pakistan",
+      "description": "Merit-based full scholarship for BS Computer Engineering.",
+      "certificate": "./assets/Ehsaas_Scholarship_Award.pdf"
+    },
+    {
+      "year": "2019",
+      "title": "Jubilee Arts International Performance Lisbon Portugal",
+      "category": "Performance",
+      "org": "Aga Khan Education Service",
+      "description": "Selected to perform at the Global International Arts Festival in Lisbon, Portugal, representing national artistic talent.",
+      "link": "https://youtu.be/vKVlqp2MPSk?si=MbWnO-DJnpE6-EHa",
+      "certificate": "./assets/Jubilee_Arts_.pdf"
+    },
+    {
+      "year": "2019",
+      "title": "Jubilee Arts Winner",
+      "category": "Arts",
+      "org": "Ismaili Community",
+      "description": "National level recognition for artistic performance.",
+      "certificate": "./assets/Jubilee_Arts_.pdf"
+    },
+    {
+      "year": "2019",
+      "title": "Play Competition Certificate",
+      "category": "Arts",
+      "org": "Aga Khan Education Service",
+      "description": "Winner in regional theater competition.",
+      "certificate": "./assets/Play_competition_certificate_2019.jpg"
+    },
+    {
+      "year": "2019",
+      "title": "Voluntary Service Teaching",
+      "category": "Service",
+      "org": "AKES,P",
+      "description": "Recognized for service as a voluntary teacher.",
+      "certificate": "./assets/Teaching_Voluntary_Service_2019.jpg"
+    },
+    {
+      "year": "2018",
+      "title": "Football Champion",
+      "category": "Sports",
+      "org": "Regional Inter-School Sports",
+      "description": "Winners certificate for football tournament.",
+      "certificate": "./assets/Football_Certificate_2018.jpg"
+    },
+    {
+      "year": "2018",
+      "title": "Trek and Field Excellence",
+      "category": "Sports",
+      "org": "School Sports Board",
+      "description": "Gold medalist in regional athletics meet.",
+      "certificate": "./assets/Trek_and_Field_Certificate_2018.jpg"
+    },
+    {
+      "year": "2017",
+      "title": "Religious Education Excellence",
+      "category": "Education",
+      "org": "ITREB Pakistan",
+      "description": "Outstanding performance in religious studies module.",
+      "certificate": "./assets/Religious_Education_2017.jpeg"
+    },
+    {
+      "year": "2014",
+      "title": "3 Legged Race Winner",
+      "category": "Sports",
+      "org": "Marathon Games",
+      "description": "Regional sports day winner.",
+      "certificate": "./assets/3_Legged_Race_2014.jpg"
+    },
+    {
+      "year": "2014",
+      "title": "Runner Up Volleyball",
+      "category": "Sports",
+      "org": "Interschool Sports",
+      "description": "Silver medal in regional volleyball championship.",
+      "certificate": "./assets/Runner_Up_Volleyball_2014.jpeg"
+    },
+    {
+      "year": "2024",
+      "title": "One Health Recognition",
+      "category": "Recognition",
+      "org": "French Embassy",
+      "description": "Participation in One Health symposium for research collaboration.",
+      "certificate": "./assets/French_Embassy_OneHealth.jpg"
+    },
+    {
+      "year": "2024",
+      "title": "IEEE Robian Winner",
+      "category": "Technical",
+      "org": "IEEE Student Branch",
+      "description": "Awarded for technical innovation in Robotics competition.",
+      "certificate": "./assets/IEEE_Robian.pdf"
+    },
+    {
+      "year": "2023",
+      "title": "GYC Camp Mentor",
+      "category": "Leadership",
+      "org": "Global Youth Camp",
+      "description": "Appointed as mentor for youth leadership development program.",
+      "certificate": "./assets/GYC_Camp_Mentor.pdf"
+    },
+    {
+      "year": "2019",
+      "title": "Rays of Light",
+      "category": "Arts",
+      "org": "Ismaili Community",
+      "description": "Artistic contribution to the Rays of Light exhibition.",
+      "certificate": "./assets/Rays_of_Light_2019.jpeg"
+    },
+    {
+      "year": "2023",
+      "title": "Taekwondo Excellence",
+      "category": "Sports",
+      "org": "Combat Sports Board",
+      "description": "Certification of skill level in Taekwondo.",
+      "certificate": "./assets/Taekwondo_Certificate.jpg"
+    },
+    {
+      "year": "2023",
+      "title": "Artistic Certification",
+      "category": "Arts",
+      "org": "GBC Arts Council",
+      "description": "Certificate for excellence in traditional GB arts.",
+      "certificate": "./assets/GBC_Artistic_Certificate.pdf"
+    },
+    {
+      "year": "2013",
+      "title": "Tajveed Principles",
+      "category": "Education",
+      "org": "ITREB",
+      "description": "Certification in Basic Principles of Tajveed.",
+      "certificate": "./assets/Basic_Principles_of_Tajveed_2013.jpeg"
+    },
+    {
+      "year": "2014",
+      "title": "Runner Up Football",
+      "category": "Sports",
+      "org": "Interschool Sports",
+      "description": "Silver medal in regional football championship.",
+      "certificate": "./assets/Runner_Up_Football_2014.jpeg"
+    }
+  ],
+  "skills": [
+    { "subject": "AI/ML", "value": 140 },
+    { "subject": "Signal Processing", "value": 130 },
+    { "subject": "GenAI/RAG", "value": 120 },
+    { "subject": "React/Web", "value": 110 },
+    { "subject": "Choreography", "value": 150 },
+    { "subject": "Embedded Systems", "value": 100 }
+  ]
+}

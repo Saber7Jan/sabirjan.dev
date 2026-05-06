@@ -7,7 +7,8 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
 
   return {
-    base: '/sabirjan.dev/',     // ← Must be this exact value
+    // ✅ This must be exactly your repo name with trailing slash
+    base: '/sabirjan.dev/',
 
     plugins: [react(), tailwindcss()],
 

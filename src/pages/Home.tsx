@@ -29,7 +29,7 @@ export default function Home() {
             <div className="absolute -inset-8 border border-white/5 animate-reverse-spin-slow rounded-full" />
             <div className="w-40 h-40 md:w-64 md:h-64 border-4 border-zinc-900 rounded-full overflow-hidden bg-zinc-900 grayscale hover:grayscale-0 transition-all duration-1000 shadow-2xl">
                <img 
-                 src={profile.image || "/assets/Profile_Picture.jpg"} 
+                 src={profile.image || "./assets/Profile_Picture.jpg"} 
                  alt="Sabir Jan" 
                  className="w-full h-full object-cover"
                  onError={(e) => (e.currentTarget.src = "https://ui-avatars.com/api/?name=Sabir+Jan&background=18181b&color=EAB308&size=512")}
@@ -117,7 +117,7 @@ export default function Home() {
                 {proj.id === "danreality" && (
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-40 transition-opacity duration-1000 z-0 scale-110 group-hover:scale-100">
                     <video 
-                      src="/assets/JanBroz_Performance.mp4" 
+                      src="./assets/JanBroz_Performance.mp4" 
                       autoPlay 
                       muted 
                       loop 
@@ -229,14 +229,14 @@ export default function Home() {
               <div className="aspect-[4/5] border-[20px] border-white/5 relative overflow-hidden group shadow-2xl">
                  {/* Video Preview on Main Dance Card */}
                  <video 
-                   src="/assets/JanBroz_Performance.mp4" 
+                   src="./assets/JanBroz_Performance.mp4" 
                    autoPlay 
                    muted 
                    loop 
                    className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-60 transition-opacity duration-1000 z-10"
                  />
                  <img 
-                   src="/assets/DanReality_Thumb.jpg" 
+                   src="./assets/DanReality_Thumb.jpg" 
                    className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:scale-110 group-hover:grayscale-0 group-hover:blur-sm" 
                    alt="Dance Performance" 
                    onError={(e) => (e.currentTarget.src = "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&q=80&w=2000")}

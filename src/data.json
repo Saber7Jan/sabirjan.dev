@@ -79,14 +79,14 @@
       "tech": ["LangChain", "Gemini API", "FastAPI", "VectorDBs"],
       "fullTech": ["LangChain", "Google Gemini API", "FastAPI", "ChromaDB", "Python", "React", "Tailwind CSS"],
       "link": "https://github.com/Saber7Jan/Aurora",
-      "image": "assets/Aurora_Thumb.svg",
+      "image": "./assets/Aurora_Thumb.svg",
       "status": "LIVE_DEPLOYED",
       "assets": [
         { "name": "Live Demo", "url": "https://aurora-ai-demo.vercel.app" },
-        { "name": "Technical Report", "url": "assets/Aurora_Report.pdf" }
+        { "name": "Technical Report", "url": "./assets/Aurora_Report.pdf" }
       ],
       "gallery": [
-        { "type": "image", "url": "assets/Aurora_Thumb.svg", "caption": "User Interface" },
+        { "type": "image", "url": "./assets/Aurora_Thumb.svg", "caption": "User Interface" },
         { "type": "image", "url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=2000", "caption": "RAG Architecture" }
       ]
     },
@@ -99,10 +99,10 @@
       "tech": ["Arduino", "C++", "Sensors", "Control Theory"],
       "fullTech": ["Arduino Uno", "L298N Driver", "IR Sensors", "PID Control", "Embedded C++"],
       "link": "#",
-      "image": "assets/Aurora_Thumb.svg",
+      "image": "./assets/Aurora_Thumb.svg",
       "status": "COMPLETED",
       "assets": [
-        { "name": "Project Report", "url": "assets/Project_Report_LFR.pdf" }
+        { "name": "Project Report", "url": "./assets/Project_Report_LFR.pdf" }
       ],
       "gallery": []
     }

@@ -53,7 +53,7 @@ export default function Projects() {
             <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-40 transition-all duration-1000 scale-105 group-hover:scale-100">
                {proj.id === "danreality" ? (
                  <video 
-                   src="/assets/JanBroz_Performance.mp4" 
+                   src="./assets/JanBroz_Performance.mp4" 
                    autoPlay 
                    muted 
                    loop 
@@ -176,10 +176,10 @@ export default function Projects() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
              {[
-               { name: 'LFR Robot', asset: '/assets/Project Report LFR.pdf' },
-               { name: 'Gesture Recognition', asset: '/assets/DanReality.pdf' },
-               { name: 'Port.folio V1', asset: '/assets/Aurora_Report.pdf' },
-               { name: 'Unity Sim', asset: '/assets/JanBroz_Performance.mp4' }
+               { name: 'LFR Robot', asset: './assets/Project_Report_LFR.pdf' },
+               { name: 'Gesture Recognition', asset: './assets/DanReality.pdf' },
+               { name: 'Port.folio V1', asset: './assets/Aurora_Report.pdf' },
+               { name: 'Unity Sim', asset: './assets/JanBroz_Performance.mp4' }
              ].map((exp, i) => (
                 <a 
                   key={i} 

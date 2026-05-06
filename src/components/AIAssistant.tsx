@@ -1,3 +1,4 @@
+// src/components/AIAssistant.tsx
 import * as React from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useState, useRef, useEffect } from "react";
@@ -5,8 +6,20 @@ import { Sparkles, X, Brain, Send } from "lucide-react";
 import { GoogleGenAI } from "@google/genai";
 import { cn } from "../lib/utils";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
-const modelName = "gemini-1.5-flash"; // Optimized for speed
+const modelName = "gemini-3-flash-preview"; // Optimized for speed
+
+let genAI: GoogleGenAI | null = null;
+
+function getAI() {
+  if (!genAI) {
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey) {
+      throw new Error("GEMINI_API_KEY is not defined");
+    }
+    genAI = new GoogleGenAI({ apiKey });
+  }
+  return genAI;
+}
 
 const SYSTEM_PROMPT = `
 You are the "Sabir Jan AI Portfolio Assistant". Your role is to represent Sabir Jan professionally.
@@ -40,6 +53,7 @@ export function AIAssistant() {
     setIsTyping(true);
 
     try {
+      const ai = getAI();
       const history = messages.map(m => ({
         role: m.role === 'user' ? 'user' : 'model',
         parts: [{ text: m.text }]

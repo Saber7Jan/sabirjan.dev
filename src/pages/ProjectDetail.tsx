@@ -170,13 +170,13 @@ export default function ProjectDetail() {
             </div>
             <div className="w-full aspect-video bg-zinc-100 border-4 border-black overflow-hidden shadow-2xl relative group">
                <iframe 
-                 src="/assets/FYP_EXTERNAL_2_FINAL.pdf#toolbar=0&navpanes=0&scrollbar=0" 
+                 src="./assets/FYP_EXTERNAL_2_FINAL.pdf#toolbar=0&navpanes=0&scrollbar=0" 
                  className="w-full h-full border-none"
                  title="EmotiFi Presentation Slides"
                />
                <div className="absolute top-4 right-4 flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
                   <a 
-                    href="/assets/FYP_EXTERNAL_2_FINAL.pdf" 
+                    href="./assets/FYP_EXTERNAL_2_FINAL.pdf" 
                     target="_blank" 
                     rel="noreferrer"
                     className="bg-black text-white p-3 rounded-full hover:bg-accent hover:text-black transition-colors"
@@ -201,7 +201,7 @@ export default function ProjectDetail() {
               <div className="lg:col-span-7">
                 <div className="w-full aspect-video bg-black border-4 border-black overflow-hidden shadow-2xl relative group">
                    <video 
-                     src="/assets/JanBroz_Performance.mp4"
+                     src="./assets/JanBroz_Performance.mp4"
                      className="w-full h-full object-cover"
                      controls
                    />

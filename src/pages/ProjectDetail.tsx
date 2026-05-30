@@ -13,6 +13,59 @@ export default function ProjectDetail() {
   const project = data.projects.find(p => p.id === id);
   const [currentSlide, setCurrentSlide] = React.useState(0);
 
+  const getHeroBackground = (id: string) => {
+    const autoplayParams = "autoplay=1&mute=1&controls=0&loop=1&playlist=";
+
+    switch (id) {
+      case "emotifi":
+        return (
+          <iframe
+            src={`https://www.youtube.com/embed/H_fxB56YC5Q?${autoplayParams}H_fxB56YC5Q&modestbranding=1&rel=0&disablekb=1`}
+            title="EmotiFi hero background"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            className="absolute inset-0 w-full h-full object-cover opacity-30 filter brightness-50 pointer-events-none"
+          />
+        );
+      case "danreality":
+        return (
+          <iframe
+            src={`https://www.youtube.com/embed/UASRLqS-DsA?${autoplayParams}UASRLqS-DsA&modestbranding=1&rel=0&disablekb=1`}
+            title="DanReality hero background"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            className="absolute inset-0 w-full h-full object-cover opacity-30 filter brightness-50 pointer-events-none"
+          />
+        );
+      case "aurora":
+        return (
+          <iframe
+            src={`https://www.youtube.com/embed/-va8icMUQxg?${autoplayParams}-va8icMUQxg&modestbranding=1&rel=0&disablekb=1`}
+            title="Aurora hero background"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            className="absolute inset-0 w-full h-full object-cover opacity-30 filter brightness-50 pointer-events-none"
+          />
+        );
+      case "lfr-robot":
+        return (
+          <img
+            src="/assets/LFR_1.png"
+            alt="LFR hero background"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        );
+      default:
+        return (
+          <motion.img 
+            initial={{ scale: 1.1, opacity: 0.5 }}
+            animate={{ scale: 1, opacity: 0.3 }}
+            transition={{ duration: 1.5 }}
+            src={project?.image}
+            className="absolute inset-0 w-full h-full object-cover grayscale brightness-50" 
+            alt={project?.title}
+          />
+        );
+    }
+  };
+
   if (!project) {
     return (
       <div className="pt-48 pb-24 px-6 text-center">
@@ -38,14 +91,8 @@ export default function ProjectDetail() {
     <div className="bg-white min-h-screen">
       {/* Dynamic Hero */}
       <section className="relative h-[80vh] bg-black overflow-hidden sticky top-0 z-0">
-         <motion.img 
-           initial={{ scale: 1.1, opacity: 0.5 }}
-           animate={{ scale: 1, opacity: 0.3 }}
-           transition={{ duration: 1.5 }}
-           src={project.image} 
-           className="w-full h-full object-cover grayscale brightness-50" 
-           alt={project.title} 
-         />
+         {getHeroBackground(project.id)}
+         <div className="absolute inset-0 bg-black/40" />
          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <motion.h1 
               initial={{ opacity: 0, y: 50 }}

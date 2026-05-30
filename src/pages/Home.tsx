@@ -9,6 +9,33 @@ import data from "../data.json";
 export default function Home() {
   const { profile, projects } = data;
 
+  const getBackgroundMedia = (id: string) => {
+    const autoplayParams = "autoplay=1&mute=1&controls=0&loop=1&playlist=";
+
+    switch (id) {
+      case "emotifi":
+        return (
+          <iframe
+            src={`https://www.youtube.com/embed/H_fxB56YC5Q?${autoplayParams}H_fxB56YC5Q&modestbranding=1&rel=0&disablekb=1`}
+            title="EmotiFi background"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            className="absolute inset-0 w-full h-full object-cover opacity-30 filter brightness-50 pointer-events-none"
+          />
+        );
+      case "danreality":
+        return (
+          <iframe
+            src={`https://www.youtube.com/embed/UASRLqS-DsA?${autoplayParams}UASRLqS-DsA&modestbranding=1&rel=0&disablekb=1`}
+            title="DanReality background"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            className="absolute inset-0 w-full h-full object-cover opacity-30 filter brightness-50 pointer-events-none"
+          />
+        );
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="pt-20">
       {/* Hero Section */}
@@ -113,18 +140,9 @@ export default function Home() {
                 whileHover={{ backgroundColor: "#121214" }}
                 className="group relative bg-zinc-950 p-16 transition-all duration-700 flex flex-col justify-between aspect-square overflow-hidden border border-transparent hover:border-accent/20"
               >
-                {/* JanBroz/DanReality Hover Preview */}
-                {proj.id === "danreality" && (
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-40 transition-opacity duration-1000 z-0 scale-110 group-hover:scale-100">
-                    <video 
-                      src="./assets/JanBroz_Performance.mp4" 
-                      autoPlay 
-                      muted 
-                      loop 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                )}
+                <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+                  {getBackgroundMedia(proj.id)}
+                </div>
 
                 <div className="relative z-10">
                   <div className="flex justify-between items-start mb-12">

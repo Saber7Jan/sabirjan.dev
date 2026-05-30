@@ -5,6 +5,50 @@ import { ArrowUpRight, Github, ExternalLink, Box, Zap, BarChart3, Target, FileTe
 import data from "../data.json";
 
 export default function Projects() {
+  const getProjectBackground = (id: string) => {
+    const autoplayParams = "autoplay=1&mute=1&controls=0&loop=1&playlist=";
+
+    switch (id) {
+      case "emotifi":
+        return (
+          <iframe
+            src={`https://www.youtube.com/embed/H_fxB56YC5Q?${autoplayParams}H_fxB56YC5Q&modestbranding=1&rel=0&disablekb=1`}
+            title="Emotifi background"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            className="absolute inset-0 w-full h-full object-cover opacity-30 filter brightness-50 pointer-events-none"
+          />
+        );
+      case "danreality":
+        return (
+          <iframe
+            src={`https://www.youtube.com/embed/UASRLqS-DsA?${autoplayParams}UASRLqS-DsA&modestbranding=1&rel=0&disablekb=1`}
+            title="DanReality background"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            className="absolute inset-0 w-full h-full object-cover opacity-30 filter brightness-50 pointer-events-none"
+          />
+        );
+      case "aurora":
+        return (
+          <iframe
+            src={`https://www.youtube.com/embed/-va8icMUQxg?${autoplayParams}-va8icMUQxg&modestbranding=1&rel=0&disablekb=1`}
+            title="Aurora background"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            className="absolute inset-0 w-full h-full object-cover opacity-30 filter brightness-50 pointer-events-none"
+          />
+        );
+      case "lfr-robot":
+        return (
+          <img
+            src="/assets/LFR_1.png"
+            alt="LFR background"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        );
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="bg-black text-white min-h-screen">
       {/* Dynamic Header */}
@@ -51,15 +95,7 @@ export default function Projects() {
           >
             {/* Background Image on Hover */}
             <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-40 transition-all duration-1000 scale-105 group-hover:scale-100">
-               {proj.id === "danreality" ? (
-                 <video 
-                   src="./assets/JanBroz_Performance.mp4" 
-                   autoPlay 
-                   muted 
-                   loop 
-                   className="w-full h-full object-cover grayscale brightness-50 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
-                 />
-               ) : (
+               {getProjectBackground(proj.id) ?? (
                  <img src={proj.image} className="w-full h-full object-cover grayscale brightness-50" alt={proj.title} />
                )}
             </div>

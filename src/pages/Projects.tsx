@@ -12,28 +12,28 @@ export default function Projects() {
       case "emotifi":
         return (
           <iframe
-            src={`https://www.youtube.com/embed/H_fxB56YC5Q?${autoplayParams}H_fxB56YC5Q&modestbranding=1&rel=0&disablekb=1`}
-            title="Emotifi background"
-            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-            className="absolute inset-0 w-full h-full object-cover opacity-30 filter brightness-50 pointer-events-none"
+            src={`https://www.youtube.com/embed/H_fxB56YC5Q?${autoplayParams}H_fxB56YC5Q&modestbranding=1&rel=0&disablekb=1&playsinline=1`}
+            title="EmotiFi background"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture; web-share"
+            className="absolute inset-0 w-full h-full object-cover opacity-100 filter brightness-50 pointer-events-none"
           />
         );
       case "danreality":
         return (
           <iframe
-            src={`https://www.youtube.com/embed/UASRLqS-DsA?${autoplayParams}UASRLqS-DsA&modestbranding=1&rel=0&disablekb=1`}
+            src={`https://www.youtube.com/embed/UASRLqS-DsA?${autoplayParams}UASRLqS-DsA&modestbranding=1&rel=0&disablekb=1&playsinline=1`}
             title="DanReality background"
-            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-            className="absolute inset-0 w-full h-full object-cover opacity-30 filter brightness-50 pointer-events-none"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture; web-share"
+            className="absolute inset-0 w-full h-full object-cover opacity-100 filter brightness-50 pointer-events-none"
           />
         );
       case "aurora":
         return (
           <iframe
-            src={`https://www.youtube.com/embed/-va8icMUQxg?${autoplayParams}-va8icMUQxg&modestbranding=1&rel=0&disablekb=1`}
+            src={`https://www.youtube.com/embed/-va8icMUQxg?${autoplayParams}-va8icMUQxg&modestbranding=1&rel=0&disablekb=1&playsinline=1`}
             title="Aurora background"
-            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-            className="absolute inset-0 w-full h-full object-cover opacity-30 filter brightness-50 pointer-events-none"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture; web-share"
+            className="absolute inset-0 w-full h-full object-cover opacity-100 filter brightness-50 pointer-events-none"
           />
         );
       case "lfr-robot":
@@ -94,7 +94,7 @@ export default function Projects() {
             className="group relative border-b border-white/10 overflow-hidden min-h-[85vh] flex items-center"
           >
             {/* Background Image on Hover */}
-            <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-40 transition-all duration-1000 scale-105 group-hover:scale-100">
+            <div className="absolute inset-0 z-0 opacity-40 group-hover:opacity-70 transition-all duration-1000 scale-105 group-hover:scale-100 pointer-events-none">
                {getProjectBackground(proj.id) ?? (
                  <img src={proj.image} className="w-full h-full object-cover grayscale brightness-50" alt={proj.title} />
                )}

@@ -23,7 +23,7 @@
 }
 
 body {
-  @apply bg-white text-black font-sans antialiased;
+  @apply bg-white text-black font-sans antialiased scroll-smooth;
 }
 
 .font-display {

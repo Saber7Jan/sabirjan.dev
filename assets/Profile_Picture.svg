@@ -1,7 +1,0 @@
-<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="400" height="400" fill="#09090B"/>
-  <circle cx="200" cy="150" r="80" fill="#EAB308" fill-opacity="0.2" stroke="#EAB308" stroke-width="2"/>
-  <path d="M100 350C100 280 144.772 240 200 240C255.228 240 300 280 300 350" stroke="#EAB308" stroke-width="2" fill="#EAB308" fill-opacity="0.1"/>
-  <text x="200" y="300" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">SABIR JAN</text>
-  <text x="200" y="330" font-family="Arial, sans-serif" font-size="12" fill="#71717A" text-anchor="middle" font-weight="bold">AI / ML RESEARCHER</text>
-</svg>

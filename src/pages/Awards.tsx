@@ -159,6 +159,12 @@ export default function Awards() {
                       <FileText className="w-3 h-3" /> Character Cert
                     </a>
                   )}
+                  {/* @ts-ignore */}
+                  {edu.englishCertificate && (
+                    <a href={edu.englishCertificate} target="_blank" rel="noreferrer" className="border border-black/20 text-black/40 group-hover:border-white/20 group-hover:text-white/60 px-6 py-3 font-mono text-[9px] uppercase font-black tracking-widest flex items-center justify-center gap-3 transition-all hover:bg-white hover:text-black">
+                      <FileText className="w-3 h-3" /> English Cert
+                    </a>
+                  )}
                 </div>
               </motion.div>
             ))}

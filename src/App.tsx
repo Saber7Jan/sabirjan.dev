@@ -122,7 +122,7 @@ export default function App() {
            </div>
            <div className="flex gap-8 font-mono text-[10px] uppercase font-bold tracking-widest">
               <a href="https://github.com/Saber7Jan" target="_blank" rel="noreferrer" className="hover:text-accent font-black transition-all">Github</a>
-              <a href="https://www.linkedin.com/in/sabirjan-ai/" target="_blank" rel="noreferrer" className="hover:text-accent font-black transition-all">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/sabirjan" target="_blank" rel="noreferrer" className="hover:text-accent font-black transition-all">LinkedIn</a>
            </div>
         </footer>
       </div>

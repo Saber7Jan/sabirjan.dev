@@ -13,7 +13,7 @@
     "location": "Islamabad, Pakistan",
     "socials": {
       "github": "https://github.com/Saber7Jan",
-      "linkedin": "https://www.linkedin.com/in/sabirjan-ai/",
+      "linkedin": "https://www.linkedin.com/in/sabirjan",
       "archive": "https://www.instagram.com/janbroz78",
       "youtube": "https://youtube.com/@SabirJan",
       "cv": "./assets/SABIR_CV.pdf",
@@ -139,9 +139,10 @@
       "period": "2020 - 2024",
       "details": "Major in AI & ML. Recipient of EHSAAS Undergraduate Scholarship. CGPA 3.4/4.0.",
       "location": "Islamabad, PK",
-      "transcript": "./assets/COMSATS_Transcript.pdf",
+      "transcript": "./assets/Sabir_BS_CE_Result_Card.pdf",
       "resultCard": "./assets/Sabir_BS_CE_Result_Card.pdf",
-      "characterCertificate": "./assets/Character_Certificate.jpg"
+      "characterCertificate": "./assets/Character_Certificate.jpg",
+      "englishCertificate": "./assets/English_language_Certificate.pdf"
     },
     {
       "institution": "Aga Khan Higher Secondary School",
@@ -149,8 +150,10 @@
       "period": "2018 - 2020",
       "details": "Grade A-1 (921/1100). Concentrated in Advanced Mathematics and Physics.",
       "location": "Karachi, PK",
-      "certificate": "./assets/HSSC_Certificate.pdf",
-      "transcript": "./assets/HSSC_Transcript.jpg"
+      "certificate": "./assets/HSSC CERTIFICATE.pdf",
+      "transcript": "./assets/HSSC_Transcript.jpg",
+      "characterCertificate": "./assets/Character_Certificate_Akhss.jpg",
+      "englishCertificate": "./assets/English_language_Certificate_AKHSS.pdf"
     },
     {
       "institution": "The Aga Khan School, Garden",

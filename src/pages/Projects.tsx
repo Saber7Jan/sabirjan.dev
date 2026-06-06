@@ -57,6 +57,7 @@ export default function Projects() {
                    autoPlay 
                    muted 
                    loop 
+                   playsInline
                    className="w-full h-full object-cover grayscale brightness-50 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
                  />
                ) : (

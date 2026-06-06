@@ -168,13 +168,27 @@ export default function ProjectDetail() {
             <div className="flex items-center gap-6 mb-12 border-l-4 border-accent pl-6">
                <h2 className="font-display text-4xl md:text-6xl font-black uppercase tracking-tighter">Presentation <br /> <span className="text-black/20 italic">Slides.</span></h2>
             </div>
-            <div className="w-full aspect-video bg-zinc-100 border-4 border-black overflow-hidden shadow-2xl relative group">
+            <div className="w-full aspect-[4/3] md:aspect-video bg-zinc-100 border-2 md:border-4 border-black overflow-hidden shadow-2xl relative group">
+               {/* Mobile Fallback: Iframes for PDFs often don't work on mobile browsers */}
+               <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center md:hidden bg-zinc-50 z-10">
+                  <FileText className="w-12 h-12 mb-4 text-black/20" />
+                  <p className="font-mono text-[10px] uppercase font-bold mb-4">PDF Preview limited on mobile</p>
+                  <a 
+                    href="./assets/FYP_EXTERNAL_2_FINAL.pdf" 
+                    target="_blank" 
+                    rel="noreferrer"
+                    className="bg-black text-white px-6 py-3 font-mono text-[10px] uppercase font-black flex items-center gap-2"
+                  >
+                    View Full Presentation <ExternalLink className="w-3 h-3" />
+                  </a>
+               </div>
+
                <iframe 
                  src="./assets/FYP_EXTERNAL_2_FINAL.pdf#toolbar=0&navpanes=0&scrollbar=0" 
-                 className="w-full h-full border-none"
+                 className="hidden md:block w-full h-full border-none"
                  title="EmotiFi Presentation Slides"
                />
-               <div className="absolute top-4 right-4 flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+               <div className="absolute top-4 right-4 hidden md:flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
                   <a 
                     href="./assets/FYP_EXTERNAL_2_FINAL.pdf" 
                     target="_blank" 
@@ -199,11 +213,12 @@ export default function ProjectDetail() {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-7">
-                <div className="w-full aspect-video bg-black border-4 border-black overflow-hidden shadow-2xl relative group">
+                <div className="w-full aspect-square md:aspect-video bg-black border-2 md:border-4 border-black overflow-hidden shadow-2xl relative group">
                    <video 
                      src="./assets/JanBroz_Performance.mp4"
                      className="w-full h-full object-cover"
                      controls
+                     playsInline
                    />
                 </div>
               </div>
@@ -242,7 +257,7 @@ export default function ProjectDetail() {
                </div>
             </div>
 
-            <div className="relative aspect-video w-full overflow-hidden bg-black border-[12px] border-black">
+            <div className="relative aspect-square md:aspect-video w-full overflow-hidden bg-black border-4 md:border-[12px] border-black">
                <AnimatePresence mode="wait">
                   <motion.div
                     key={currentSlide}
@@ -260,6 +275,7 @@ export default function ProjectDetail() {
                         autoPlay
                         muted
                         loop
+                        playsInline
                       />
                     ) : (
                       <img 
@@ -268,7 +284,7 @@ export default function ProjectDetail() {
                         alt={project.gallery[currentSlide].caption}
                       />
                     )}
-                    <div className="absolute bottom-12 left-12 p-8 bg-black border-l-4 border-accent max-w-sm">
+                    <div className="absolute bottom-4 left-4 right-4 md:bottom-12 md:left-12 p-4 md:p-8 bg-black border-l-4 border-accent max-w-sm">
                        <p className="font-mono text-xs text-white uppercase font-black tracking-widest mb-2 opacity-40">Entry_0{currentSlide + 1} // Frame</p>
                        <p className="font-display text-xl text-white font-black uppercase tracking-tighter">{project.gallery[currentSlide].caption}</p>
                     </div>

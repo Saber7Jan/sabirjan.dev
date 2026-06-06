@@ -121,6 +121,7 @@ export default function Home() {
                       autoPlay 
                       muted 
                       loop 
+                      playsInline
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -233,6 +234,7 @@ export default function Home() {
                    autoPlay 
                    muted 
                    loop 
+                   playsInline
                    className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-60 transition-opacity duration-1000 z-10"
                  />
                  <img 

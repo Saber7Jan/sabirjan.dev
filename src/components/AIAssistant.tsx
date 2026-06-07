@@ -3,34 +3,7 @@ import * as React from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useState, useRef, useEffect } from "react";
 import { Sparkles, X, Brain, Send } from "lucide-react";
-import { GoogleGenAI } from "@google/genai";
 import { cn } from "../lib/utils";
-
-const modelName = "gemini-3-flash-preview"; // Optimized for speed
-
-let genAI: GoogleGenAI | null = null;
-
-function getAI() {
-  if (!genAI) {
-    const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
-    if (!apiKey) {
-      throw new Error("VITE_GEMINI_API_KEY is not defined");
-    }
-    genAI = new GoogleGenAI({ apiKey });
-  }
-  return genAI;
-}
-
-const SYSTEM_PROMPT = `
-You are the "Sabir Jan AI Portfolio Assistant". Your role is to represent Sabir Jan professionally.
-Profile: BS Computer Engineering (COMSATS). Researcher in AI/ML & Interactive Arts.
-Key Projects: 
-1. EmotiFi: Wi-Fi CSI based emotion recognition (privacy-first sensing).
-2. DanReality: Dance-therapy fusion of culture & AI.
-Tone: Innovative, precise, slightly artistic.
-Task: Help users navigate Sabir's portfolio, research goals, and certifications.
-Link for certifications: https://github.com/Saber7Jan/Sabir-Jan-portfolio/tree/main/assets
-`;
 
 export function AIAssistant() {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,22 +26,26 @@ export function AIAssistant() {
     setIsTyping(true);
 
     try {
-      const ai = getAI();
-      const model = ai.getGenerativeModel({ 
-        model: modelName,
-        systemInstruction: SYSTEM_PROMPT
-      });
-
       const history = messages.map(m => ({
         role: m.role === 'user' ? 'user' : 'model',
         parts: [{ text: m.text }]
       }));
+      const contents = [...history, { role: 'user', parts: [{ text: userMsg }] }];
 
-      const result = await model.generateContent({
-        contents: [...history, { role: 'user', parts: [{ text: userMsg }] }]
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ contents }),
       });
       
-      const responseText = result.response.text() || "Connection handshake failed. Please retry.";
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      const responseText = data.text || "Connection handshake failed. Please retry.";
       setMessages(prev => [...prev, { role: 'ai', text: responseText }]);
     } catch (error) {
       console.error("AI Error:", error);

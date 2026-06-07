@@ -10,9 +10,20 @@
   --color-accent: #00FF41; /* Technical Matrix Green */
   --color-prestige: #f5f2ed; /* Warm Luxury White */
 
+  --animate-spin-slow: spin-clockwise 20s linear infinite;
+  --animate-reverse-spin-slow: spin-counter-clockwise 30s linear infinite;
+
   @keyframes marquee {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
+  }
+  @keyframes spin-clockwise {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @keyframes spin-counter-clockwise {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
   }
 }
 

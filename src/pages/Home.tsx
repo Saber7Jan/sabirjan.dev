@@ -10,7 +10,7 @@ export default function Home() {
   const { profile, projects } = data;
 
   return (
-    <div className="pt-20">
+    <div className="pt-20 bg-zinc-950 text-white min-h-screen">
       {/* Hero Section */}
       <header className="min-h-[90vh] py-20 px-6 md:px-12 flex flex-col items-center justify-center border-b border-white/5 relative overflow-hidden bg-zinc-950">
         {/* Background Marquee (CR7 Style) */}
@@ -113,16 +113,22 @@ export default function Home() {
                 whileHover={{ backgroundColor: "#121214" }}
                 className="group relative bg-zinc-950 p-16 transition-all duration-700 flex flex-col justify-between aspect-square overflow-hidden border border-transparent hover:border-accent/20"
               >
-                {/* JanBroz/DanReality Hover Preview */}
-                {proj.id === "danreality" && (
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-40 transition-opacity duration-1000 z-0 scale-110 group-hover:scale-100">
-                    <video 
-                      src="./assets/JanBroz_Performance.mp4" 
-                      autoPlay 
-                      muted 
-                      loop 
-                      playsInline
-                      className="w-full h-full object-cover"
+                {/* Project Hover Background Video Preview */}
+                {["emotifi", "danreality", "aurora", "lfr-robot"].includes(proj.id) && (
+                  <div className="absolute inset-0 opacity-30 group-hover:opacity-50 transition-all duration-1000 z-0 scale-100 pointer-events-none">
+                    <iframe 
+                      src={
+                        proj.id === "emotifi"
+                          ? "https://www.youtube.com/embed/H_fxB56YC5Q?autoplay=1&mute=1&controls=0&loop=1&playlist=H_fxB56YC5Q&modestbranding=1&rel=0&disablekb=1&playsinline=1"
+                          : proj.id === "danreality"
+                          ? "https://www.youtube.com/embed/UASRLqS-DsA?autoplay=1&mute=1&controls=0&loop=1&playlist=UASRLqS-DsA&modestbranding=1&rel=0&disablekb=1&playsinline=1"
+                          : proj.id === "aurora"
+                          ? "https://www.youtube.com/embed/-va8icMUQxg?autoplay=1&mute=1&controls=0&loop=1&playlist=-va8icMUQxg&modestbranding=1&rel=0&disablekb=1&playsinline=1"
+                          : "https://www.youtube.com/embed/K3fT9XW_9eA?autoplay=1&mute=1&controls=0&loop=1&playlist=K3fT9XW_9eA&modestbranding=1&rel=0&disablekb=1&playsinline=1"
+                      }
+                      title={`${proj.id} background`}
+                      allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                      className="absolute inset-0 w-full h-full object-cover"
                     />
                   </div>
                 )}
@@ -153,6 +159,17 @@ export default function Home() {
                     >
                       Case Study <ArrowUpRight className="w-3 h-3" />
                     </Link>
+                    {/* @ts-ignore */}
+                    {proj.projectPitch && (
+                      <a 
+                        href={proj.projectPitch} 
+                        target="_blank" 
+                        rel="noreferrer"
+                        className="px-6 py-3 bg-[#00FF41] text-black font-mono text-[10px] uppercase font-black hover:bg-white hover:text-black transition-all"
+                      >
+                        Project Pitch
+                      </a>
+                    )}
                     {proj.assets?.map((asset, ai) => (
                       <a 
                         key={ai}
@@ -207,7 +224,7 @@ export default function Home() {
             <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-white/5 rounded-full blur-[100px]" />
             
             <div className="relative z-10 scale-110 md:scale-150 transition-transform duration-1000 group-hover:scale-[1.6]">
-               <SkillsRadar />
+               <SkillsRadar dark={true} />
             </div>
           </div>
         </div>
@@ -229,16 +246,14 @@ export default function Home() {
            >
               <div className="aspect-[4/5] border-[20px] border-white/5 relative overflow-hidden group shadow-2xl">
                  {/* Video Preview on Main Dance Card */}
-                 <video 
-                   src="./assets/JanBroz_Performance.mp4" 
-                   autoPlay 
-                   muted 
-                   loop 
-                   playsInline
-                   className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-60 transition-opacity duration-1000 z-10"
-                 />
+                 <iframe 
+                    src="https://www.youtube.com/embed/BZwzWJesn-g?autoplay=1&mute=1&controls=0&loop=1&playlist=BZwzWJesn-g&modestbranding=1&rel=0&disablekb=1"
+                    title="KPOP Performance Highlight"
+                    allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                    className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-60 transition-opacity duration-1000 z-10 pointer-events-none"
+                  />
                  <img 
-                   src="./assets/DanReality_Thumb.jpg" 
+                   src="/assets/DanReality_Thumb.jpg" 
                    className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:scale-110 group-hover:grayscale-0 group-hover:blur-sm" 
                    alt="Dance Performance" 
                    onError={(e) => (e.currentTarget.src = "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&q=80&w=2000")}

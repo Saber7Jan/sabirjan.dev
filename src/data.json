@@ -16,11 +16,11 @@
       "linkedin": "https://www.linkedin.com/in/sabirjan-ai/",
       "archive": "https://www.instagram.com/janbroz78",
       "youtube": "https://youtube.com/@SabirJan",
-      "cv": "./assets/SABIR_CV.pdf",
-      "english_proficiency": "./assets/English_language_Certificate.pdf",
-      "hope_certificate": "./assets/Hope_Certificate.pdf"
+      "cv": "/assets/SABIR_CV.pdf",
+      "english_proficiency": "/assets/English_language_Certificate.pdf",
+      "hope_certificate": "/assets/Hope_Certificate.pdf"
     },
-    "image": "./assets/Profile_Picture.jpg"
+    "image": "/assets/Profile_Picture.jpg"
   },
   "projects": [
     {
@@ -32,42 +32,67 @@
       "tech": ["Python", "TensorFlow", "ESP32", "Signal Processing"],
       "fullTech": ["Python", "TensorFlow", "Keras", "ESP32", "Signal Processing", "CSI Tool", "PyTorch"],
       "link": "https://github.com/Saber7Jan/EmotiFi",
-      "image": "./assets/Emotifi_Thumb.svg",
+      "image": "/assets/Emotifi_Thumb.svg",
       "status": "COMPLETED",
       "assets": [
-        { "name": "Final Thesis", "url": "./assets/FYP_Thesis_SP25-37.pdf" },
-        { "name": "Research Paper", "url": "./assets/FYP_Research_Paper_SP25-37.pdf" },
-        { "name": "Presentation Slides", "url": "./assets/FYP_EXTERNAL_2_FINAL.pdf" },
-        { "name": "Research Poster", "url": "./assets/EmotiFi_Poster.pdf" },
-        { "name": "Career Expo Dossier", "url": "./assets/FYP_Career_Expo.pdf" }
+        { "name": "Final Thesis", "url": "/assets/FYP_Thesis_SP25-37.pdf" },
+        { "name": "Research Paper", "url": "/assets/FYP_Research_Paper_SP25-37.pdf" },
+        { "name": "Presentation Slides", "url": "/assets/FYP_EXTERNAL_2_FINAL.pdf" },
+        { "name": "Research Poster", "url": "/assets/EmotiFi_Poster.pdf" },
+        { "name": "Career Expo Dossier", "url": "/assets/FYP_Career_Expo.pdf" }
       ],
       "gallery": [
-        { "type": "image", "url": "./assets/Emotifi_Thumb.svg", "caption": "System Architecture" },
+        { "type": "image", "url": "/assets/Emotifi_Thumb.svg", "caption": "System Architecture" },
         { "type": "image", "url": "https://images.unsplash.com/photo-1558486012-817176f84c6d?auto=format&fit=crop&q=80&w=2000", "caption": "Signal Analysis" }
+      ],
+      "projectPitch": "https://youtu.be/_DIFr9ggSxY",
+      "presentationSlides": [
+        { "page": 1, "type": "document", "title": "One-Page Summary", "url": "/assets/EmotiFi-One_page.pptx", "description": "Executive summary of EmotiFi research" },
+        { "page": 2, "type": "gallery", "title": "Visual Documentation", "items": [
+          { "type": "image", "url": "/assets/vis_1.jpeg", "caption": "Visualization 1" },
+          { "type": "image", "url": "/assets/vis_2.jpeg", "caption": "Visualization 2" },
+          { "type": "image", "url": "/assets/vis_3.jpeg", "caption": "Visualization 3" }
+        ]},
+        { "page": 3, "type": "document", "title": "Full Presentation", "url": "/assets/EmotiFi_Presentation_v2.pptx", "slides": 16, "description": "Comprehensive 16-slide presentation with detailed research findings" }
+      ],
+      "visualEvidence": [
+        { "entry": "ENTRY_01", "title": "Environment Setup", "url": "https://youtu.be/H_fxB56YC5Q", "type": "youtube" },
+        { "entry": "ENTRY_02", "title": "Environment Demo", "url": "https://youtu.be/SZbf_DQhbMo", "type": "youtube" },
+        { "entry": "ENTRY_03", "title": "Viewing spectrogram and detecting Emotion real time", "url": "https://youtube.com/shorts/ujREgDqOk1o", "type": "youtube" },
+        { "entry": "ENTRY_04", "title": "REACT_APP_DEMO", "url": "https://youtu.be/mjasBI-TJkg", "type": "youtube" },
+        { "entry": "ENTRY_05", "title": "FYP_Summary_Pitch", "url": "https://youtu.be/p8LP8th_lGc", "type": "youtube" }
       ]
     },
     {
       "id": "danreality",
       "title": "DanReality: Heritage Dance AI",
       "subtitle": "Creative Tech // Cultural Arts",
-      "description": "Fusion of Gilgit-Baltistan heritage dance and AI for mental wellness, involving real-time gesture feedback and affective synchronization.",
-      "longDescription": "DanReality (also known as JanBroz) is an experimental research project. JanBroz is the dedicated creative technology and artist channel of Sabir and his twin brother, featuring immersive performance videos and AI integrations. The project uses computer vision (MediaPipe) to track traditional dance movements in real-time, providing feedback on posture, rhythm, and emotional expression. It features immersive backgrounds that react to the dancer's intensity and mood, exploring therapeutic interventions through cultural arts.",
+      "description": "Holistic fusion of Hunza heritage dance and AI designed to promote mental wellness through real-time gesture feedback and affective synchronization.",
+      "longDescription": "DanReality is an experimental research project developed by JanBroz, our creative laboratory where we explore the intersection of Hunza heritage and modern performance. While JanBroz serves as our dedicated studio for cultural storytelling and artistic experimentation, DanReality is the scalable research venture born from these efforts, aimed at transforming dance into a scientific discipline for mental wellness. Our project utilizes computer vision (MediaPipe) to track traditional dance movements in real-time, providing immediate feedback on posture, rhythm, and emotional expression. By leveraging the tech stack including Unity 3D, MediaPipe, React, Node.js, Socket.io, Three.js, and Blender we are building a foundation to engineer 'Affective Kinematic Synchronization'—allowing AI to not just mimic movement, but to anticipate and 'feel' the emotional intent of human partners to improve global cognitive and emotional well-being.",
+      "researchDescription": "Holistic fusion of Hunza heritage dance and AI designed to promote mental wellness through real-time gesture feedback and affective synchronization. Moving beyond camera-based mimicry, DanReality is engineering empathy into motion, developing systems that learn to anticipate human rhythm and intent to serve as a companion for mental health support and physical therapy.",
+      "abstractSpecification": "DanReality is an experimental research project developed by JanBroz, our creative laboratory where we explore the intersection of Hunza heritage and modern performance. While JanBroz serves as our dedicated studio for cultural storytelling and artistic experimentation, DanReality is the scalable research venture born from these efforts, aimed at transforming dance into a scientific discipline for mental wellness. Our project utilizes computer vision (MediaPipe) to track traditional dance movements in real-time, providing immediate feedback on posture, rhythm, and emotional expression. By leveraging a tech stack including Unity, React, Three.js, and Node.js, we are building a foundation to engineer 'Affective Kinematic Synchronization'—allowing AI to not just mimic movement, but to anticipate and 'feel' the emotional intent of human partners to improve global cognitive and emotional well-being.",
       "tech": ["Unity", "MediaPipe", "React", "Node.js"],
       "fullTech": ["Unity 3D", "MediaPipe", "React", "Node.js", "Socket.io", "Three.js", "Blender"],
       "link": "https://github.com/Saber7Jan/JanBroz",
-      "image": "./assets/DanReality_Thumb.svg",
+      "image": "/assets/DanReality_Thumb.svg",
       "status": "IN_PROGRESS",
       "assets": [
-        { "name": "Research Thesis", "url": "./assets/FYP_Thesis_SP25-37.pdf" },
-        { "name": "Technical Report", "url": "./assets/DanReality.pdf" },
-        { "name": "Pitch Deck", "url": "./assets/DanReality_PitchDeck.pdf" },
-        { "name": "Performance Video", "url": "./assets/JanBroz_Performance.mp4" },
+        { "name": "Research Thesis", "url": "/assets/DanReality_Thesis.pdf" },
+        { "name": "Technical Report", "url": "/assets/DanReality.pdf" },
+        { "name": "Pitch Deck", "url": "/assets/DanReality_PitchDeck.pdf" },
+        { "name": "MOTIVATION_Message", "url": "https://youtube.com/shorts/cKj0qS5HpyY?si=fGyPCKc6lptrEc4I" },
         { "name": "Live Artist Website", "url": "https://saber7jan.github.io/JanBroz/" },
         { "name": "JanBroz Repository", "url": "https://github.com/Saber7Jan/JanBroz" }
       ],
+      "liveArtistDemo": "https://youtu.be/GNNeJge3NpA",
       "gallery": [
-        { "type": "video", "url": "./assets/JanBroz_Performance.mp4", "caption": "Live Performance @ K-Pop World Festival" },
-        { "type": "image", "url": "./assets/DanReality_Thumb.svg", "caption": "Interaction Mockup" }
+        { "type": "video", "url": "/assets/JanBroz_Performance.mp4", "caption": "Live Performance @ K-Pop World Festival" },
+        { "type": "image", "url": "/assets/DanReality_Thumb.svg", "caption": "Interaction Mockup" }
+      ],
+      "visualEvidence": [
+        { "entry": "ENTRY_01", "title": "DanReality Pitch", "url": "https://youtu.be/jWUAvF0kO1I", "type": "youtube" },
+        { "entry": "ENTRY_02", "title": "DanReality SWOT", "url": "https://youtu.be/4iGjUqllRtg", "type": "youtube" },
+        { "entry": "ENTRY_03", "title": "KPOP World Performance", "url": "https://youtu.be/BZwzWJesn-g?si=zuugkNNHQV1sFD7t", "type": "youtube" }
       ]
     },
     {
@@ -79,14 +104,14 @@
       "tech": ["LangChain", "Gemini API", "FastAPI", "VectorDBs"],
       "fullTech": ["LangChain", "Google Gemini API", "FastAPI", "ChromaDB", "Python", "React", "Tailwind CSS"],
       "link": "https://github.com/Saber7Jan/Aurora",
-      "image": "./assets/Aurora_Thumb.svg",
+      "image": "/assets/Aurora_Thumb.svg",
       "status": "LIVE_DEPLOYED",
       "assets": [
         { "name": "Live Demo", "url": "https://aurora-ai-demo.vercel.app" },
-        { "name": "Technical Report", "url": "./assets/Aurora_Report.pdf" }
+        { "name": "Technical Report", "url": "/assets/Aurora_Report.pdf" }
       ],
       "gallery": [
-        { "type": "image", "url": "./assets/Aurora_Thumb.svg", "caption": "User Interface" },
+        { "type": "image", "url": "/assets/Aurora_Thumb.svg", "caption": "User Interface" },
         { "type": "image", "url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=2000", "caption": "RAG Architecture" }
       ]
     },
@@ -99,10 +124,10 @@
       "tech": ["Arduino", "C++", "Sensors", "Control Theory"],
       "fullTech": ["Arduino Uno", "L298N Driver", "IR Sensors", "PID Control", "Embedded C++"],
       "link": "#",
-      "image": "./assets/Aurora_Thumb.svg",
+      "image": "/assets/LFR_1.png",
       "status": "COMPLETED",
       "assets": [
-        { "name": "Project Report", "url": "./assets/Project_Report_LFR.pdf" }
+        { "name": "Project Report", "url": "/assets/Project_Report_LFR.pdf" }
       ],
       "gallery": []
     }
@@ -129,7 +154,7 @@
         "Verified model performance against benchmark datasets."
       ],
       "location": "Islamabad, PK",
-      "certificate": "./assets/Internship_Adan_AI.pdf"
+      "certificate": "/assets/Internship_Adan_AI.pdf"
     }
   ],
   "education": [
@@ -139,9 +164,9 @@
       "period": "2020 - 2024",
       "details": "Major in AI & ML. Recipient of EHSAAS Undergraduate Scholarship. CGPA 3.4/4.0.",
       "location": "Islamabad, PK",
-      "transcript": "./assets/COMSATS_Transcript.pdf",
-      "resultCard": "./assets/Sabir_BS_CE_Result_Card.pdf",
-      "characterCertificate": "./assets/Character_Certificate.jpg"
+      "transcript": "/assets/COMSATS_Transcript.pdf",
+      "resultCard": "/assets/Sabir_BS_CE_Result_Card.pdf",
+      "characterCertificate": "/assets/Character_Certificate.jpg"
     },
     {
       "institution": "Aga Khan Higher Secondary School",
@@ -149,8 +174,8 @@
       "period": "2018 - 2020",
       "details": "Grade A-1 (921/1100). Concentrated in Advanced Mathematics and Physics.",
       "location": "Karachi, PK",
-      "certificate": "./assets/HSSC_Certificate.pdf",
-      "transcript": "./assets/HSSC_Transcript.jpg"
+      "certificate": "/assets/HSSC_Certificate.pdf",
+      "transcript": "/assets/HSSC_Transcript.jpg"
     },
     {
       "institution": "The Aga Khan School, Garden",
@@ -158,8 +183,8 @@
       "period": "2016 - 2018",
       "details": "Metriculation with honors.",
       "location": "Karachi, PK",
-      "certificate": "./assets/SSC_Certificate.jpg",
-      "transcript": "./assets/SSC_Transcript.jpg"
+      "certificate": "/assets/SSC_Certificate.jpg",
+      "transcript": "/assets/SSC_Transcript.jpg"
     }
   ],
   "awards": [
@@ -169,7 +194,7 @@
       "category": "Performance",
       "org": "Embassy of Republic of Korea",
       "description": "Regional qualifying tournament performance involving Jan Broz (DanReality).",
-      "certificate": "./assets/KPOP_Certificate.jpeg"
+      "certificate": "/assets/KPOP_Certificate.jpeg"
     },
     {
       "year": "2023",
@@ -177,7 +202,7 @@
       "category": "Arts",
       "org": "COMSATS Dramatics Society",
       "description": "Exceptional contribution to theatrical performances and community building.",
-      "certificate": "./assets/CSC_Dramatics_Best_Member.png"
+      "certificate": "/assets/CSC_Dramatics_Best_Member.png"
     },
     {
       "year": "2023",
@@ -185,7 +210,7 @@
       "category": "Arts",
       "org": "CSC FIESTA (COMSATS)",
       "description": "Awarded for outstanding cultural performance representing the university.",
-      "certificate": "./assets/CSC_Best_Performer_Fiesta.png"
+      "certificate": "/assets/CSC_Best_Performer_Fiesta.png"
     },
     {
       "year": "2021",
@@ -193,7 +218,7 @@
       "category": "Academic",
       "org": "Government of Pakistan",
       "description": "Merit-based full scholarship for BS Computer Engineering.",
-      "certificate": "./assets/Ehsaas_Scholarship_Award.pdf"
+      "certificate": "/assets/Ehsaas_Scholarship_Award.pdf"
     },
     {
       "year": "2019",
@@ -202,7 +227,7 @@
       "org": "Aga Khan Education Service",
       "description": "Selected to perform at the Global International Arts Festival in Lisbon, Portugal, representing national artistic talent.",
       "link": "https://youtu.be/vKVlqp2MPSk?si=MbWnO-DJnpE6-EHa",
-      "certificate": "./assets/Jubilee_Arts_.pdf"
+      "certificate": "/assets/Jubilee_Arts_.pdf"
     },
     {
       "year": "2019",
@@ -210,7 +235,7 @@
       "category": "Arts",
       "org": "Ismaili Community",
       "description": "National level recognition for artistic performance.",
-      "certificate": "./assets/Jubilee_Arts_.pdf"
+      "certificate": "/assets/Jubilee_Arts_.pdf"
     },
     {
       "year": "2019",
@@ -218,7 +243,7 @@
       "category": "Arts",
       "org": "Aga Khan Education Service",
       "description": "Winner in regional theater competition.",
-      "certificate": "./assets/Play_competition_certificate_2019.jpg"
+      "certificate": "/assets/Play_competition_certificate_2019.jpg"
     },
     {
       "year": "2019",
@@ -226,7 +251,7 @@
       "category": "Service",
       "org": "AKES,P",
       "description": "Recognized for service as a voluntary teacher.",
-      "certificate": "./assets/Teaching_Voluntary_Service_2019.jpg"
+      "certificate": "/assets/Teaching_Voluntary_Service_2019.jpg"
     },
     {
       "year": "2018",
@@ -234,7 +259,7 @@
       "category": "Sports",
       "org": "Regional Inter-School Sports",
       "description": "Winners certificate for football tournament.",
-      "certificate": "./assets/Football_Certificate_2018.jpg"
+      "certificate": "/assets/Football_Certificate_2018.jpg"
     },
     {
       "year": "2018",
@@ -242,7 +267,7 @@
       "category": "Sports",
       "org": "School Sports Board",
       "description": "Gold medalist in regional athletics meet.",
-      "certificate": "./assets/Trek_and_Field_Certificate_2018.jpg"
+      "certificate": "/assets/Trek_and_Field_Certificate_2018.jpg"
     },
     {
       "year": "2017",
@@ -250,7 +275,7 @@
       "category": "Education",
       "org": "ITREB Pakistan",
       "description": "Outstanding performance in religious studies module.",
-      "certificate": "./assets/Religious_Education_2017.jpeg"
+      "certificate": "/assets/Religious_Education_2017.jpeg"
     },
     {
       "year": "2014",
@@ -258,7 +283,7 @@
       "category": "Sports",
       "org": "Marathon Games",
       "description": "Regional sports day winner.",
-      "certificate": "./assets/3_Legged_Race_2014.jpg"
+      "certificate": "/assets/3_Legged_Race_2014.jpg"
     },
     {
       "year": "2014",
@@ -266,7 +291,7 @@
       "category": "Sports",
       "org": "Interschool Sports",
       "description": "Silver medal in regional volleyball championship.",
-      "certificate": "./assets/Runner_Up_Volleyball_2014.jpeg"
+      "certificate": "/assets/Runner_Up_Volleyball_2014.jpeg"
     },
     {
       "year": "2024",
@@ -274,7 +299,7 @@
       "category": "Recognition",
       "org": "French Embassy",
       "description": "Participation in One Health symposium for research collaboration.",
-      "certificate": "./assets/French_Embassy_OneHealth.jpg"
+      "certificate": "/assets/French_Embassy_OneHealth.jpg"
     },
     {
       "year": "2024",
@@ -282,7 +307,7 @@
       "category": "Technical",
       "org": "IEEE Student Branch",
       "description": "Awarded for technical innovation in Robotics competition.",
-      "certificate": "./assets/IEEE_Robian.pdf"
+      "certificate": "/assets/IEEE_Robian.pdf"
     },
     {
       "year": "2023",
@@ -290,7 +315,7 @@
       "category": "Leadership",
       "org": "Global Youth Camp",
       "description": "Appointed as mentor for youth leadership development program.",
-      "certificate": "./assets/GYC_Camp_Mentor.pdf"
+      "certificate": "/assets/GYC_Camp_Mentor.pdf"
     },
     {
       "year": "2019",
@@ -298,7 +323,7 @@
       "category": "Arts",
       "org": "Ismaili Community",
       "description": "Artistic contribution to the Rays of Light exhibition.",
-      "certificate": "./assets/Rays_of_Light_2019.jpeg"
+      "certificate": "/assets/Rays_of_Light_2019.jpeg"
     },
     {
       "year": "2023",
@@ -306,7 +331,7 @@
       "category": "Sports",
       "org": "Combat Sports Board",
       "description": "Certification of skill level in Taekwondo.",
-      "certificate": "./assets/Taekwondo_Certificate.jpg"
+      "certificate": "/assets/Taekwondo_Certificate.jpg"
     },
     {
       "year": "2023",
@@ -314,7 +339,7 @@
       "category": "Arts",
       "org": "GBC Arts Council",
       "description": "Certificate for excellence in traditional GB arts.",
-      "certificate": "./assets/GBC_Artistic_Certificate.pdf"
+      "certificate": "/assets/GBC_Artistic_Certificate.pdf"
     },
     {
       "year": "2013",
@@ -322,7 +347,7 @@
       "category": "Education",
       "org": "ITREB",
       "description": "Certification in Basic Principles of Tajveed.",
-      "certificate": "./assets/Basic_Principles_of_Tajveed_2013.jpeg"
+      "certificate": "/assets/Basic_Principles_of_Tajveed_2013.jpeg"
     },
     {
       "year": "2014",
@@ -330,7 +355,7 @@
       "category": "Sports",
       "org": "Interschool Sports",
       "description": "Silver medal in regional football championship.",
-      "certificate": "./assets/Runner_Up_Football_2014.jpeg"
+      "certificate": "/assets/Runner_Up_Football_2014.jpeg"
     }
   ],
   "skills": [

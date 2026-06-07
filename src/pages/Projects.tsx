@@ -13,7 +13,7 @@ export default function Projects() {
           <motion.div
              initial={{ opacity: 0, x: -20 }}
              animate={{ opacity: 1, x: 0 }}
-             className="flex items-center gap-4 mb-8 font-mono text-accent text-[11px] uppercase tracking-[0.5em] font-bold"
+             className="flex items-center gap-4 mb-8 font-mono text-accent text-[10px] md:text-[11px] uppercase tracking-[0.3em] md:tracking-[0.5em] font-bold"
           >
             <span className="w-8 h-px bg-accent" />
             Portfolio // Research Exhibits
@@ -21,19 +21,19 @@ export default function Projects() {
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-display text-7xl md:text-[14vw] font-black uppercase tracking-tighter leading-[0.75] mb-12"
+            className="font-display text-3xl md:text-8xl font-black uppercase tracking-tighter leading-[0.75] mb-12"
           >
             RESEARCH <br /> <span className="text-accent italic">EXHIBITS.</span>
           </motion.h1>
-          <div className="flex flex-col md:flex-row gap-12 font-mono text-[10px] uppercase font-bold tracking-widest text-white/40">
-             <div className="flex items-center gap-3">
-                <span className="text-white text-lg">03</span> MAJOR DEPLOYMENTS
+          <div className="flex flex-col md:flex-row gap-6 md:gap-12 font-mono text-[9px] md:text-[10px] uppercase font-bold tracking-widest text-white/40">
+             <div className="flex items-center gap-2 md:gap-3">
+                <span className="text-white text-base md:text-lg">03</span> MAJOR DEPLOYMENTS
              </div>
-             <div className="flex items-center gap-3">
-                <span className="text-white text-lg">85%+</span> ACCURACY BENCHMARKS
+             <div className="flex items-center gap-2 md:gap-3">
+                <span className="text-white text-base md:text-lg">85%+</span> ACCURACY BENCHMARKS
              </div>
-             <div className="flex items-center gap-3">
-                <span className="text-white text-lg">2026</span> OPERATIONAL CYCLE
+             <div className="flex items-center gap-2 md:gap-3">
+                <span className="text-white text-base md:text-lg">2026</span> OPERATIONAL CYCLE
              </div>
           </div>
         </div>
@@ -49,16 +49,22 @@ export default function Projects() {
             transition={{ duration: 0.8 }}
             className="group relative border-b border-white/10 overflow-hidden min-h-[85vh] flex items-center"
           >
-            {/* Background Image on Hover */}
-            <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-40 transition-all duration-1000 scale-105 group-hover:scale-100">
-               {proj.id === "danreality" ? (
-                 <video 
-                   src="./assets/JanBroz_Performance.mp4" 
-                   autoPlay 
-                   muted 
-                   loop 
-                   playsInline
-                   className="w-full h-full object-cover grayscale brightness-50 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+            {/* Background Image/Video (Always Playing) */}
+            <div className="absolute inset-0 z-0 opacity-30 group-hover:opacity-50 transition-all duration-1000 scale-100">
+               {["emotifi", "danreality", "aurora", "lfr-robot"].includes(proj.id) ? (
+                 <iframe 
+                   src={
+                     proj.id === "emotifi" 
+                       ? "https://www.youtube.com/embed/H_fxB56YC5Q?autoplay=1&mute=1&controls=0&loop=1&playlist=H_fxB56YC5Q&modestbranding=1&rel=0&disablekb=1&playsinline=1"
+                       : proj.id === "danreality"
+                       ? "https://www.youtube.com/embed/UASRLqS-DsA?autoplay=1&mute=1&controls=0&loop=1&playlist=UASRLqS-DsA&modestbranding=1&rel=0&disablekb=1&playsinline=1"
+                       : proj.id === "aurora"
+                       ? "https://www.youtube.com/embed/-va8icMUQxg?autoplay=1&mute=1&controls=0&loop=1&playlist=-va8icMUQxg&modestbranding=1&rel=0&disablekb=1&playsinline=1"
+                       : "https://www.youtube.com/embed/K3fT9XW_9eA?autoplay=1&mute=1&controls=0&loop=1&playlist=K3fT9XW_9eA&modestbranding=1&rel=0&disablekb=1&playsinline=1"
+                   }
+                   title={`${proj.id} background`}
+                   allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                   className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                  />
                ) : (
                  <img src={proj.image} className="w-full h-full object-cover grayscale brightness-50" alt={proj.title} />
@@ -107,6 +113,18 @@ export default function Projects() {
                       {asset.name}
                     </a>
                   ))}
+                  {/* @ts-ignore */}
+                  {proj.projectPitch && (
+                    <a 
+                      href={proj.projectPitch} 
+                      target="_blank" 
+                      rel="noreferrer"
+                      className="flex items-center gap-3 px-4 py-2 bg-[#00FF41] text-black hover:bg-white hover:text-black transition-all font-mono text-[9px] uppercase font-black"
+                    >
+                      <Play className="w-3 h-3" />
+                      Project Pitch
+                    </a>
+                  )}
                   <Link 
                     to={`/projects/${proj.id}`}
                     className="flex items-center gap-3 px-4 py-2 bg-white text-black hover:bg-accent hover:text-black transition-all font-mono text-[9px] uppercase font-black"
@@ -177,10 +195,10 @@ export default function Projects() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
              {[
-               { name: 'LFR Robot', asset: './assets/Project_Report_LFR.pdf' },
-               { name: 'Gesture Recognition', asset: './assets/DanReality.pdf' },
-               { name: 'Port.folio V1', asset: './assets/Aurora_Report.pdf' },
-               { name: 'Unity Sim', asset: './assets/JanBroz_Performance.mp4' }
+               { name: 'LFR Robot', asset: '/assets/Project_Report_LFR.pdf' },
+               { name: 'Gesture Recognition', asset: '/assets/DanReality.pdf' },
+               { name: 'Port.folio V1', asset: '/assets/Aurora_Report.pdf' },
+               { name: 'Unity Sim', asset: '/assets/JanBroz_Performance.mp4' }
              ].map((exp, i) => (
                 <a 
                   key={i} 

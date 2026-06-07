@@ -2,5 +2,7 @@
   "name": "Sabir Jan // Modern Dynamic Portfolio",
   "description": "An immersive, high-impact research portfolio blending AI/ML engineering with interactive arts and creative technology. Featuring EmotiFi, DanReality, and elite-level motion aesthetics.",
   "requestFramePermissions": [],
-  "majorCapabilities": []
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

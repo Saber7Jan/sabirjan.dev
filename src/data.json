@@ -1,0 +1,398 @@
+{
+  "profile": {
+    "name": "Sabir Jan",
+    "title": "AI & Machine Learning Researcher",
+    "roles": [
+      "AI/ML Engineer",
+      "Agentic Systems Builder",
+      "Computer Vision Specialist",
+      "Wireless Signal R&D Engineer"
+    ],
+    "bio": "Computer Engineering graduate specializing in Agentic AI, Deep Learning, and Computer Vision. Architect of EmotiFi (contactless Wi-Fi emotion recognition) and stateful multi-agent educational systems.",
+    "email": "saber8ronaldo@gmail.com",
+    "location": "Islamabad, Pakistan",
+    "socials": {
+      "github": "https://github.com/Saber7Jan",
+      "linkedin": "https://linkedin.com/in/sabirjan",
+      "archive": "https://www.instagram.com/janbroz78",
+      "youtube": "https://youtube.com/@SabirJan",
+      "cv": "/assets/Sabir_Jan_CV.pdf",
+      "english_proficiency": "/assets/English_language_Certificate.pdf",
+      "hope_certificate": "/assets/Hope_Certificate.pdf"
+    },
+    "image": "/assets/Profile_Picture.jpg"
+  },
+  "projects": [
+    {
+      "id": "emotifi",
+      "title": "EmotiFi",
+      "subtitle": "Final Year Research Project",
+      "description": "A privacy-preserving emotion recognition system using Wi-Fi Channel State Information and deep learning. The project transforms CSI data into spectrograms and classifies emotional states using neural networks.",
+      "longDescription": "EmotiFi is a cutting-edge research project that leverages Wi-Fi Channel State Information (CSI) to detect human emotions without wearable sensors. By analyzing the distortions in Wi-Fi signals caused by human presence and movement, the system extracts unique biometric signatures. The project transforms CSI data into spectrograms and classifies emotional states using neural networks.",
+      "tech": ["Python", "PyTorch", "ESP32", "Deep Learning", "Signal Processing", "Computer Vision"],
+      "fullTech": ["Python", "PyTorch", "ESP32", "Signal Processing", "Deep Learning", "Computer Vision"],
+      "link": "https://github.com/Saber7Jan/EmotiFi",
+      "image": "/assets/Emotifi_Thumb.svg",
+      "status": "COMPLETED",
+      "assets": [
+        { "name": "Final Thesis", "url": "/assets/FYP_Thesis_SP25-37.pdf" },
+        { "name": "Research Paper", "url": "/assets/FYP_Research_Paper_SP25-37.pdf" },
+        { "name": "Presentation Slides", "url": "/assets/FYP_EXTERNAL_2_FINAL.pdf" },
+        { "name": "Research Poster", "url": "/assets/EmotiFi_Poster.pdf" },
+        { "name": "Career Expo Dossier", "url": "/assets/FYP_Career_Expo.pdf" }
+      ],
+      "gallery": [
+        { "type": "image", "url": "/assets/Emotifi_Thumb.svg", "caption": "System Architecture" },
+        { "type": "image", "url": "https://images.unsplash.com/photo-1558486012-817176f84c6d?auto=format&fit=crop&q=80&w=2000", "caption": "Signal Analysis" }
+      ],
+      "projectPitch": "https://youtu.be/_DIFr9ggSxY",
+      "presentationSlides": [
+        { "page": 1, "type": "document", "title": "One-Page Summary", "url": "/assets/EmotiFi-One_page.pptx", "description": "Executive summary of EmotiFi research" },
+        { "page": 2, "type": "gallery", "title": "Visual Documentation", "items": [
+          { "type": "image", "url": "/assets/vis_1.jpeg", "caption": "Visualization 1" },
+          { "type": "image", "url": "/assets/vis_2.jpeg", "caption": "Visualization 2" },
+          { "type": "image", "url": "/assets/vis_3.jpeg", "caption": "Visualization 3" }
+        ]},
+        { "page": 3, "type": "document", "title": "Full Presentation", "url": "/assets/EmotiFi_Presentation_v2.pptx", "slides": 16, "description": "Comprehensive 16-slide presentation with detailed research findings" }
+      ],
+      "visualEvidence": [
+        { "entry": "ENTRY_01", "title": "Environment Setup", "url": "https://youtu.be/H_fxB56YC5Q", "type": "youtube" },
+        { "entry": "ENTRY_02", "title": "Environment Demo", "url": "https://youtu.be/SZbf_DQhbMo", "type": "youtube" },
+        { "entry": "ENTRY_03", "title": "Viewing spectrogram and detecting Emotion real time", "url": "https://youtube.com/shorts/ujREgDqOk1o", "type": "youtube" },
+        { "entry": "ENTRY_04", "title": "REACT_APP_DEMO", "url": "https://youtu.be/mjasBI-TJkg", "type": "youtube" },
+        { "entry": "ENTRY_05", "title": "FYP_Summary_Pitch", "url": "https://youtu.be/p8LP8th_lGc", "type": "youtube" }
+      ]
+    },
+    {
+      "id": "danreality",
+      "title": "DanReality: Heritage Dance AI",
+      "subtitle": "Creative Tech // Cultural Arts",
+      "description": "Holistic fusion of Hunza heritage dance and AI designed to promote mental wellness through real-time gesture feedback and affective synchronization.",
+      "longDescription": "DanReality is an experimental research project developed by JanBroz, our creative laboratory where we explore the intersection of Hunza heritage and modern performance. While JanBroz serves as our dedicated studio for cultural storytelling and artistic experimentation, DanReality is the scalable research venture born from these efforts, aimed at transforming dance into a scientific discipline for mental wellness. Our project utilizes computer vision (MediaPipe) to track traditional dance movements in real-time, providing immediate feedback on posture, rhythm, and emotional expression. By leveraging the tech stack including Unity 3D, MediaPipe, React, Node.js, Socket.io, Three.js, and Blender we are building a foundation to engineer 'Affective Kinematic Synchronization'—allowing AI to not just mimic movement, but to anticipate and 'feel' the emotional intent of human partners to improve global cognitive and emotional well-being.",
+      "researchDescription": "Holistic fusion of Hunza heritage dance and AI designed to promote mental wellness through real-time gesture feedback and affective synchronization. Moving beyond camera-based mimicry, DanReality is engineering empathy into motion, developing systems that learn to anticipate human rhythm and intent to serve as a companion for mental health support and physical therapy.",
+      "abstractSpecification": "DanReality is an experimental research project developed by JanBroz, our creative laboratory where we explore the intersection of Hunza heritage and modern performance. While JanBroz serves as our dedicated studio for cultural storytelling and artistic experimentation, DanReality is the scalable research venture born from these efforts, aimed at transforming dance into a scientific discipline for mental wellness. Our project utilizes computer vision (MediaPipe) to track traditional dance movements in real-time, providing immediate feedback on posture, rhythm, and emotional expression. By leveraging a tech stack including Unity, React, Three.js, and Node.js, we are building a foundation to engineer 'Affective Kinematic Synchronization'—allowing AI to not just mimic movement, but to anticipate and 'feel' the emotional intent of human partners to improve global cognitive and emotional well-being.",
+      "tech": ["Unity", "MediaPipe", "React", "Node.js"],
+      "fullTech": ["Unity 3D", "MediaPipe", "React", "Node.js", "Socket.io", "Three.js", "Blender"],
+      "link": "https://github.com/Saber7Jan/JanBroz",
+      "image": "/assets/DanReality_Thumb.svg",
+      "status": "IN_PROGRESS",
+      "assets": [
+        { "name": "Research Thesis", "url": "/assets/DanReality_Thesis.pdf" },
+        { "name": "Technical Report", "url": "/assets/DanReality.pdf" },
+        { "name": "Pitch Deck", "url": "/assets/DanReality_PitchDeck.pdf" },
+        { "name": "MOTIVATION_Message", "url": "https://youtube.com/shorts/cKj0qS5HpyY?si=fGyPCKc6lptrEc4I" },
+        { "name": "Live Artist Website", "url": "https://saber7jan.github.io/JanBroz/" },
+        { "name": "JanBroz Repository", "url": "https://github.com/Saber7Jan/JanBroz" }
+      ],
+      "liveArtistDemo": "https://youtu.be/GNNeJge3NpA",
+      "gallery": [
+        { "type": "video", "url": "/assets/JanBroz_Performance.mp4", "caption": "Live Performance @ K-Pop World Festival" },
+        { "type": "image", "url": "/assets/DanReality_Thumb.svg", "caption": "Interaction Mockup" }
+      ],
+      "visualEvidence": [
+        { "entry": "ENTRY_01", "title": "DanReality Pitch", "url": "https://youtu.be/jWUAvF0kO1I", "type": "youtube" },
+        { "entry": "ENTRY_02", "title": "DanReality SWOT", "url": "https://youtu.be/4iGjUqllRtg", "type": "youtube" },
+        { "entry": "ENTRY_03", "title": "KPOP World Performance", "url": "https://youtu.be/BZwzWJesn-g?si=zuugkNNHQV1sFD7t", "type": "youtube" }
+      ]
+    },
+    {
+      "id": "study-assistant",
+      "title": "AI Study Assistant",
+      "subtitle": "AI EDUCATION SYSTEM // RESEARCH",
+      "description": "An adaptive learning platform built with LangGraph, FastAPI, Gemini, SQLite, and Streamlit. Features include topic explanation, quiz generation, automated evaluation, recall learning, progress analytics, and adaptive recommendations.",
+      "longDescription": "The AI Study Assistant is an adaptive learning platform built with LangGraph, FastAPI, Gemini, SQLite, and Streamlit. Features include topic explanation, quiz generation, automated evaluation, recall learning, progress analytics, and adaptive recommendations. Multiple AI agents collaborate through LangGraph workflows to provide personalized learning experiences. Student performance is stored in SQLite and analyzed to recommend future quiz difficulty levels.",
+      "tech": ["LangGraph", "FastAPI", "Gemini", "SQLite", "Streamlit", "Python"],
+      "fullTech": ["LangGraph", "FastAPI", "Google Gemini API", "SQLite", "Python", "Streamlit", "Pandas"],
+      "link": "https://github.com/Saber7Jan/study-assistant-multi-agent-system",
+      "image": "/assets/SA_UI.png",
+      "status": "DEPLOYED & OPERATIONAL",
+      "projectPitch": "https://youtu.be/vPE9Ox7FReY?si=FfWWu5ImomodfRms",
+      "assets": [
+        { "name": "Live Demo", "url": "https://huggingface.co/spaces/Sabir7Jan/study-assistant-multi-agent-system" },
+        { "name": "Technical Report", "url": "/assets/AI_Study_Assistant_Technical_Report.pdf" },
+        { "name": "GitHub Repository", "url": "https://github.com/Saber7Jan/study-assistant-multi-agent-system" }
+      ],
+      "gallery": [
+        { "type": "image", "url": "/assets/SA_UI.png", "caption": "Student Dashboard and Topic Selection Interface" },
+        { "type": "image", "url": "/assets/SA_QUIZ.png", "caption": "Adaptive Quiz Generation and Assessment Mode" },
+        { "type": "image", "url": "/assets/SA_recall.png", "caption": "Quiz History and Spaced Repetition Recall Panel" },
+        { "type": "image", "url": "/assets/SA_progress.png", "caption": "Interactive Multi-Agent Progress Tracking Charts" },
+        { "type": "image", "url": "/assets/SA_ABOUT.png", "caption": "System Architecture and Interactive Tutoring Design" }
+      ],
+      "features": [
+        { "name": "Topic Explanation", "description": "Generate concise educational explanations for any study topic using Gemini." },
+        { "name": "Quiz Generation", "description": "Create dynamic quizzes with adjustable difficulty levels and configurable question counts." },
+        { "name": "Quiz Evaluation", "description": "Automatically evaluate student answers and provide detailed feedback." },
+        { "name": "Quiz Recall", "description": "Retrieve and review previously generated quizzes from persistent storage." },
+        { "name": "Progress Dashboard", "description": "Visualize learning progress using performance metrics and score history." },
+        { "name": "Adaptive Learning", "description": "Recommend future quiz difficulty levels based on historical performance." }
+      ],
+      "metrics": [
+        { "label": "AI Agents", "value": "4+ Assistants" },
+        { "label": "Backend APIs", "value": "5 REST Endpoints" },
+        { "label": "Database Engine", "value": "SQLite3" },
+        { "label": "Adaptive Engine", "value": "Active Recommendation" },
+        { "label": "Retention System", "value": "Quiz Recall Capable" },
+        { "label": "Analytics Suite", "value": "Performance Dashboard" }
+      ],
+      "highlights": {
+        "systemArchitecture": [
+          "LangGraph Orchestration: Coordinates 4+ specialized AI agents for structured tutoring, quiz creation, grading, and adaptive recommendations.",
+          "FastAPI Service Layer: High-performance backend API layer serving lightweight frontends with low-latency learning delivery.",
+          "Gemini API Reasoning: Advanced natural language synthesis powering rich concept explanation and deep contextual evaluation.",
+          "SQLite Storage: Securely persists active learning status, quiz history logs, student metrics, and evaluation history.",
+          "Streamlit & Pandas Interface: Desktop application featuring interactive study workspaces, past record retrieval, and streak performance tracking."
+        ],
+        "educationalImpact": [
+          "Multi-Agent Advantage: Collaborating agents provide highly structured, specific feedback loops compared to simple conversational chatbots.",
+          "Adaptive Tutoring: Continuous performance assessments adjust feedback and suggestion paths to support students of all skill levels."
+        ]
+      }
+    },
+    {
+      "id": "lfr-robot",
+      "title": "Line Following Robot",
+      "subtitle": "Embedded Systems // PID Control",
+      "description": "Autonomous robot utilizing infra-red sensors and PID control for high-speed line tracking and obstacle avoidance.",
+      "longDescription": "A robust embedded systems project featuring a line-following robot capable of navigating complex tracks with variable speeds. Implemented using Arduino/C++, featuring real-time sensor calibration and optimized control loops (PID).",
+      "tech": ["Arduino", "C++", "Sensors", "Control Theory"],
+      "fullTech": ["Arduino Uno", "L298N Driver", "IR Sensors", "PID Control", "Embedded C++"],
+      "link": "#",
+      "image": "/assets/LFR_1.png",
+      "status": "COMPLETED",
+      "assets": [
+        { "name": "Project Report", "url": "/assets/Project_Report_LFR.pdf" }
+      ],
+      "gallery": []
+    }
+  ],
+  "experience": [
+    {
+      "company": "AI SkillBridge Pakistan (with AXI Technologies)",
+      "role": "AI Engineering Trainee",
+      "period": "FEB 2026 – MAY 2026",
+      "details": [
+        "Completed a rigorous 3-month advanced AI & Deep Learning specialization, clearing official SLAC engineering evaluations.",
+        "Engineered KhudiChat, a virtual avatar driven by Generative AI utilizing MediaPipe, OpenCV, Stable Diffusion, and GAN-based expression synthesis.",
+        "Developed Agentic AI applications using transformer networks and autonomous multi-agent workflows integrated into production sprints."
+      ],
+      "location": "Islamabad (Hybrid)",
+      "certificate": ""
+    },
+    {
+      "company": "Adan Institute of Technology",
+      "role": "AI Development Intern",
+      "period": "OCT 2025 – DEC 2025",
+      "details": [
+        "Built production-grade, scalable RAG architectures and conversational backends utilizing Python, LangChain, and LangGraph.",
+        "Designed state-driven crisis tracking flows with integrated safety fallbacks and interactive Streamlit interfaces.",
+        "Collaborated on multi-agent workflow optimizations, semantic search pipelines, and vector databases using ChromaDB."
+      ],
+      "location": "Islamabad (Remote)",
+      "certificate": "/assets/Internship_Adan_AI.pdf"
+    }
+  ],
+  "education": [
+    {
+      "institution": "COMSATS University Islamabad",
+      "degree": "BS in Computer Engineering",
+      "period": "2020 – 2026",
+      "details": "Focus Areas: Artificial Intelligence, Machine Learning, and Edge Embedded Systems. Core Achievements: Lead Developer for EmotiFi (Contactless Emotion Recognition via Wi-Fi CSI).",
+      "location": "Islamabad, PK",
+      "transcript": "/assets/Sabir_BS_CE_Result_Card.pdf",
+      "resultCard": "/assets/Sabir_BS_CE_Result_Card.pdf",
+      "englishCertificate": "/assets/English_language_Certificate.pdf",
+      "characterCertificate": "/assets/character_certificate_Comsats.jpeg"
+    },
+    {
+      "institution": "Aga Khan Higher Secondary School",
+      "degree": "HSSC (Pre-Engineering)",
+      "period": "2018 – 2020",
+      "details": "Graduated with a focus on Advanced Mathematics and Physics.",
+      "location": "Gilgit, PK",
+      "certificate": "/assets/HSSC_Certificate.pdf",
+      "transcript": "/assets/HSSC_Transcript.jpg",
+      "englishCertificate": "/assets/English_language_Certificate_AKHSS.pdf",
+      "characterCertificate": "/assets/Character_Certificate.jpg"
+    }
+  ],
+  "awards": [
+    {
+      "year": "2024",
+      "title": "K-pop World Festival (3rd Prize)",
+      "category": "Performance",
+      "org": "Embassy of Republic of Korea",
+      "description": "Regional qualifying tournament performance involving Jan Broz (DanReality).",
+      "certificate": "/assets/KPOP_Certificate.jpeg"
+    },
+    {
+      "year": "2023",
+      "title": "Best Dramatics Member",
+      "category": "Arts",
+      "org": "COMSATS Dramatics Society",
+      "description": "Exceptional contribution to theatrical performances and community building.",
+      "certificate": "/assets/CSC_Dramatics_Best_Member.png"
+    },
+    {
+      "year": "2023",
+      "title": "Best Performer",
+      "category": "Arts",
+      "org": "CSC FIESTA (COMSATS)",
+      "description": "Awarded for outstanding cultural performance representing the university.",
+      "certificate": "/assets/CSC_Best_Performer_Fiesta.png"
+    },
+    {
+      "year": "2021",
+      "title": "EHSAAS Undergraduate Scholarship",
+      "category": "Academic",
+      "org": "Government of Pakistan",
+      "description": "Merit-based full scholarship for BS Computer Engineering.",
+      "certificate": "/assets/Ehsaas_Scholarship_Award.pdf"
+    },
+    {
+      "year": "2019",
+      "title": "Jubilee Arts International Performance Lisbon Portugal",
+      "category": "Performance",
+      "org": "Aga Khan Education Service",
+      "description": "Selected to perform at the Global International Arts Festival in Lisbon, Portugal, representing national artistic talent.",
+      "link": "https://youtu.be/vKVlqp2MPSk?si=MbWnO-DJnpE6-EHa",
+      "certificate": "/assets/Jubilee_Arts_.pdf"
+    },
+    {
+      "year": "2019",
+      "title": "Jubilee Arts Winner",
+      "category": "Arts",
+      "org": "Ismaili Community",
+      "description": "National level recognition for artistic performance.",
+      "certificate": "/assets/Jubilee_Arts_.pdf"
+    },
+    {
+      "year": "2019",
+      "title": "Play Competition Certificate",
+      "category": "Arts",
+      "org": "Aga Khan Education Service",
+      "description": "Winner in regional theater competition.",
+      "certificate": "/assets/Play_competition_certificate_2019.jpg"
+    },
+    {
+      "year": "2019",
+      "title": "Voluntary Service Teaching",
+      "category": "Service",
+      "org": "AKES,P",
+      "description": "Recognized for service as a voluntary teacher.",
+      "certificate": "/assets/Teaching_Voluntary_Service_2019.jpg"
+    },
+    {
+      "year": "2018",
+      "title": "Football Champion",
+      "category": "Sports",
+      "org": "Regional Inter-School Sports",
+      "description": "Winners certificate for football tournament.",
+      "certificate": "/assets/Football_Certificate_2018.jpg"
+    },
+    {
+      "year": "2018",
+      "title": "Trek and Field Excellence",
+      "category": "Sports",
+      "org": "School Sports Board",
+      "description": "Gold medalist in regional athletics meet.",
+      "certificate": "/assets/Trek_and_Field_Certificate_2018.jpg"
+    },
+    {
+      "year": "2017",
+      "title": "Religious Education Excellence",
+      "category": "Education",
+      "org": "ITREB Pakistan",
+      "description": "Outstanding performance in religious studies module.",
+      "certificate": "/assets/Religious_Education_2017.jpeg"
+    },
+    {
+      "year": "2014",
+      "title": "3 Legged Race Winner",
+      "category": "Sports",
+      "org": "Marathon Games",
+      "description": "Regional sports day winner.",
+      "certificate": "/assets/3_Legged_Race_2014.jpg"
+    },
+    {
+      "year": "2014",
+      "title": "Runner Up Volleyball",
+      "category": "Sports",
+      "org": "Interschool Sports",
+      "description": "Silver medal in regional volleyball championship.",
+      "certificate": "/assets/Runner_Up_Volleyball_2014.jpeg"
+    },
+    {
+      "year": "2024",
+      "title": "One Health Recognition",
+      "category": "Recognition",
+      "org": "French Embassy",
+      "description": "Participation in One Health symposium for research collaboration.",
+      "certificate": "/assets/French_Embassy_OneHealth.jpg"
+    },
+    {
+      "year": "2024",
+      "title": "IEEE Robian Winner",
+      "category": "Technical",
+      "org": "IEEE Student Branch",
+      "description": "Awarded for technical innovation in Robotics competition.",
+      "certificate": "/assets/IEEE_Robian.pdf"
+    },
+    {
+      "year": "2023",
+      "title": "GYC Camp Mentor",
+      "category": "Leadership",
+      "org": "Global Youth Camp",
+      "description": "Appointed as mentor for youth leadership development program.",
+      "certificate": "/assets/GYC_Camp_Mentor.pdf"
+    },
+    {
+      "year": "2019",
+      "title": "Rays of Light",
+      "category": "Arts",
+      "org": "Ismaili Community",
+      "description": "Artistic contribution to the Rays of Light exhibition.",
+      "certificate": "/assets/Rays_of_Light_2019.jpeg"
+    },
+    {
+      "year": "2023",
+      "title": "Taekwondo Excellence",
+      "category": "Sports",
+      "org": "Combat Sports Board",
+      "description": "Certification of skill level in Taekwondo.",
+      "certificate": "/assets/Taekwondo_Certificate.jpg"
+    },
+    {
+      "year": "2023",
+      "title": "Artistic Certification",
+      "category": "Arts",
+      "org": "GBC Arts Council",
+      "description": "Certificate for excellence in traditional GB arts.",
+      "certificate": "/assets/GBC_Artistic_Certificate.pdf"
+    },
+    {
+      "year": "2013",
+      "title": "Tajveed Principles",
+      "category": "Education",
+      "org": "ITREB",
+      "description": "Certification in Basic Principles of Tajveed.",
+      "certificate": "/assets/Basic_Principles_of_Tajveed_2013.jpeg"
+    },
+    {
+      "year": "2014",
+      "title": "Runner Up Football",
+      "category": "Sports",
+      "org": "Interschool Sports",
+      "description": "Silver medal in regional football championship.",
+      "certificate": "/assets/Runner_Up_Football_2014.jpeg"
+    }
+  ],
+  "skills": [
+    { "subject": "AI/ML", "value": 140 },
+    { "subject": "Signal Processing", "value": 130 },
+    { "subject": "GenAI/RAG", "value": 120 },
+    { "subject": "React/Web", "value": 110 },
+    { "subject": "Choreography", "value": 150 },
+    { "subject": "Embedded Systems", "value": 100 }
+  ]
+}

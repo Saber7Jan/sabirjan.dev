@@ -1,0 +1,384 @@
+import * as React from "react";
+import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "motion/react";
+import { ArrowUpRight, Github, ExternalLink, Box, Zap, BarChart3, Target, FileText, Download, Play, X } from "lucide-react";
+import data from "../data.json";
+import { PDFViewer } from "../components/PDFViewer";
+
+const getProjectCTALinks = (projId: string) => {
+  switch (projId) {
+    case "emotifi":
+      return {
+        demo: "https://youtu.be/mjasBI-TJkg",
+        report: "/assets/FYP_Research_Paper_SP25-37.pdf",
+        repo: "https://github.com/Saber7Jan/EmotiFi",
+        pitch: "https://youtu.be/_DIFr9ggSxY"
+      };
+    case "danreality":
+      return {
+        demo: "https://saber7jan.github.io/JanBroz/",
+        report: "/assets/DanReality.pdf",
+        repo: "https://github.com/Saber7Jan/JanBroz",
+        pitch: "https://youtu.be/jWUAvF0kO1I"
+      };
+    case "lfr-robot":
+      return {
+        demo: "",
+        report: "/assets/Project_Report_LFR.pdf",
+        repo: "",
+        pitch: ""
+      };
+    case "study-assistant":
+    default:
+      return {
+        demo: "https://huggingface.co/spaces/Sabir7Jan/study-assistant-multi-agent-system",
+        report: "/assets/AI_Study_Assistant_Technical_Report.pdf",
+        repo: "https://github.com/Saber7Jan/study-assistant-multi-agent-system",
+        pitch: "https://youtu.be/vPE9Ox7FReY?si=FfWWu5ImomodfRms"
+      };
+  }
+};
+
+export default function Projects() {
+  const [activeReport, setActiveReport] = React.useState<{ url: string; title: string } | null>(null);
+
+  // Prevent background scroll when modal is open
+  React.useEffect(() => {
+    if (activeReport) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [activeReport]);
+
+  return (
+    <div className="bg-black text-white min-h-screen">
+      {/* Dynamic Header */}
+      <header className="pt-48 pb-24 px-6 md:px-12 border-b border-white/10 bg-black">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+             initial={{ opacity: 0, x: -20 }}
+             animate={{ opacity: 1, x: 0 }}
+             className="flex items-center gap-4 mb-8 font-mono text-accent text-[10px] md:text-[11px] uppercase tracking-[0.3em] md:tracking-[0.5em] font-bold"
+          >
+            <span className="w-8 h-px bg-accent" />
+            Portfolio // Research Exhibits
+          </motion.div>
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="font-display text-3xl md:text-8xl font-black uppercase tracking-tighter leading-[0.75] mb-12"
+          >
+            RESEARCH <br /> <span className="text-accent italic">EXHIBITS.</span>
+          </motion.h1>
+          <div className="flex flex-col md:flex-row gap-6 md:gap-12 font-mono text-[9px] md:text-[10px] uppercase font-bold tracking-widest text-white/40">
+             <div className="flex items-center gap-2 md:gap-3">
+                <span className="text-white text-base md:text-lg">03</span> MAJOR DEPLOYMENTS
+             </div>
+             <div className="flex items-center gap-2 md:gap-3">
+                <span className="text-white text-base md:text-lg">85%+</span> ACCURACY BENCHMARKS
+             </div>
+             <div className="flex items-center gap-2 md:gap-3">
+                <span className="text-white text-base md:text-lg">2026</span> OPERATIONAL CYCLE
+             </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Projects Grid (CR7 Style: Bold, Dynamic, Data-Rich) */}
+      <section className="bg-black">
+        {data.projects.map((proj, i) => (
+          <motion.div 
+            key={proj.id}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="group relative border-b border-white/10 overflow-hidden min-h-[85vh] flex items-center"
+          >
+            {/* Background Image/Video (Always Playing) */}
+            <div className="absolute inset-0 z-0 opacity-30 group-hover:opacity-50 transition-all duration-1000 scale-100">
+               {["emotifi", "danreality", "study-assistant"].includes(proj.id) ? (
+                 <iframe 
+                   src={
+                     proj.id === "emotifi" 
+                       ? "https://www.youtube.com/embed/H_fxB56YC5Q?autoplay=1&mute=1&controls=0&loop=1&playlist=H_fxB56YC5Q&modestbranding=1&rel=0&disablekb=1&playsinline=1"
+                       : proj.id === "danreality"
+                       ? "https://www.youtube.com/embed/UASRLqS-DsA?autoplay=1&mute=1&controls=0&loop=1&playlist=UASRLqS-DsA&modestbranding=1&rel=0&disablekb=1&playsinline=1"
+                       : proj.id === "study-assistant"
+                       ? "https://www.youtube.com/embed/6ZSRwku96iY?autoplay=1&mute=1&controls=0&loop=1&playlist=6ZSRwku96iY&modestbranding=1&rel=0&disablekb=1&playsinline=1&enablejsapi=1"
+                       : "https://www.youtube.com/embed/K3fT9XW_9eA?autoplay=1&mute=1&controls=0&loop=1&playlist=K3fT9XW_9eA&modestbranding=1&rel=0&disablekb=1&playsinline=1"
+                   }
+                   title={`${proj.id} background`}
+                   allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                   className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                   onLoad={(e) => {
+                     if (proj.id === "study-assistant") {
+                       try {
+                         const target = e.currentTarget;
+                         setTimeout(() => {
+                           target.contentWindow?.postMessage(
+                             JSON.stringify({ event: "command", func: "setPlaybackRate", args: [2] }),
+                             "*"
+                           );
+                         }, 1500);
+                       } catch (err) {
+                         console.log("Failed to set 2x speed", err);
+                       }
+                     }
+                   }}
+                 />
+               ) : (
+                 <img src={proj.image} className="w-full h-full object-cover grayscale brightness-50" alt={proj.title} />
+               )}
+            </div>
+
+            <div className="max-w-7xl mx-auto w-full px-6 md:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-16 py-32 items-center">
+              {/* Numbering & Vertical Line */}
+              <div className="lg:col-span-1 hidden lg:flex flex-col items-center">
+                 <div className="font-mono text-white/10 text-6xl font-black group-hover:text-accent group-hover:scale-110 transition-all duration-500">
+                   0{i + 1}
+                 </div>
+                 <div className="w-px h-32 bg-white/10 my-8 group-hover:bg-accent transition-colors" />
+              </div>
+
+              {/* Main Content */}
+              <div className="lg:col-span-7 flex flex-col items-start translate-y-8 group-hover:translate-y-0 transition-transform duration-1000">
+                <div className="flex flex-wrap gap-4 mb-8">
+                  {proj.tech.map(t => (
+                    <span key={t} className="px-5 py-1 bg-white/5 border border-white/10 text-[10px] font-mono font-black uppercase tracking-widest text-accent">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+                <h2 className="font-display text-3xl sm:text-5xl md:text-8xl text-white font-black uppercase tracking-tighter leading-[0.8] mb-8 group-hover:italic transition-all">
+                  {proj.title}
+                </h2>
+                <div className="font-serif italic text-xl md:text-2xl text-accent mb-6 lg:opacity-0 lg:group-hover:opacity-100 lg:translate-y-4 lg:group-hover:translate-y-0 opacity-100 translate-y-0 transition-all duration-500">
+                  {proj.subtitle}
+                </div>
+                <p className="font-sans text-lg md:text-xl text-white/50 leading-relaxed max-w-xl group-hover:text-white/80 transition-colors mb-12">
+                  {proj.description}
+                </p>
+
+                 {/* Asset Quick Links - Optimized for Mobile Native feel with 0 hover dependency */}
+                 <div className="w-full mt-6 relative z-20 space-y-3">
+                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
+                       {getProjectCTALinks(proj.id).demo && (
+                          <a 
+                            href={getProjectCTALinks(proj.id).demo} 
+                            target="_blank" 
+                            rel="noreferrer"
+                            className="px-4 py-3.5 bg-[#00FF41] text-black font-mono text-[9px] uppercase font-black hover:bg-white transition-all flex items-center justify-center gap-1.5 rounded min-h-[48px] active:scale-95 shadow-[0_0_15px_rgba(0,255,65,0.25)]"
+                          >
+                            Live Demo <ExternalLink className="w-3.5 h-3.5" />
+                          </a>
+                       )}
+                       {getProjectCTALinks(proj.id).report && (
+                          <a 
+                            href="#" onClick={(e) => { e.preventDefault(); setActiveReport({ url: getProjectCTALinks(proj.id).report, title: proj.id === "lfr-robot" ? "Project Report" : "Technical Report" }); }} 
+                            target="_blank" 
+                            rel="noreferrer"
+                            className="px-4 py-3.5 bg-zinc-900 border border-white/10 text-white font-mono text-[9px] uppercase font-black hover:bg-accent hover:text-black transition-all flex items-center justify-center gap-1.5 rounded min-h-[48px] active:scale-95"
+                          >
+                            {proj.id === "lfr-robot" ? "PROJECT REPORT" : "Technical Report"} <FileText className="w-3.5 h-3.5" />
+                          </a>
+                       )}
+                       {proj.id === "lfr-robot" ? (
+                          <div 
+                            className="px-4 py-3.5 bg-zinc-950 border border-white/5 text-white/40 font-mono text-[9px] uppercase font-black flex items-center justify-center gap-1.5 rounded min-h-[48px]"
+                            title="Repository Coming Soon"
+                          >
+                            Repository Coming Soon <Github className="w-3.5 h-3.5 opacity-30" />
+                          </div>
+                       ) : (
+                          getProjectCTALinks(proj.id).repo && (
+                            <a 
+                              href={getProjectCTALinks(proj.id).repo} 
+                              target="_blank" 
+                              rel="noreferrer"
+                              className="px-4 py-3.5 bg-zinc-900 border border-white/10 text-white font-mono text-[9px] uppercase font-black hover:bg-accent hover:text-black transition-all flex items-center justify-center gap-1.5 rounded min-h-[48px] active:scale-95"
+                            >
+                              GitHub Repository <Github className="w-3.5 h-3.5" />
+                            </a>
+                          )
+                       )}
+                       {getProjectCTALinks(proj.id).pitch && (
+                          <a 
+                            href={getProjectCTALinks(proj.id).pitch} 
+                            target="_blank" 
+                            rel="noreferrer"
+                            className="px-4 py-3.5 bg-zinc-900 border border-white/10 text-white font-mono text-[9px] uppercase font-black hover:bg-accent hover:text-black transition-all flex items-center justify-center gap-1.5 rounded min-h-[48px] active:scale-95"
+                          >
+                            Project Pitch Idea <Zap className="w-3.5 h-3.5" />
+                          </a>
+                       )}
+                    </div>
+                   
+                   <div className="w-full pt-1">
+                      <Link 
+                        to={`/projects/${proj.id}`}
+                        className="px-5 py-3.5 bg-white text-black font-mono text-[10px] uppercase font-black hover:bg-[#00FF41] transition-all flex items-center justify-center gap-2 rounded min-h-[48px] active:scale-95 w-full text-center"
+                      >
+                        View Case Study <ArrowUpRight className="w-3.5 h-3.5" />
+                      </Link>
+                   </div>
+                 </div>
+
+                {/* Performance Metrics (CR7 Style Add-on) */}
+                <div className="grid grid-cols-3 gap-6 border-t border-white/10 pt-8 lg:opacity-40 lg:group-hover:opacity-100 opacity-100 transition-opacity w-full">
+                   <div>
+                      <div className="font-mono text-[9px] uppercase text-white/40 mb-2">Integrity</div>
+                      <div className="flex items-center gap-2 font-display text-xl font-black text-white">
+                         <Target className="w-4 h-4 text-accent" /> HIGH
+                      </div>
+                   </div>
+                   <div>
+                      <div className="font-mono text-[9px] uppercase text-white/40 mb-2">Optimization</div>
+                      <div className="flex items-center gap-2 font-display text-xl font-black text-white">
+                         <Zap className="w-4 h-4 text-accent" /> 2.4s
+                      </div>
+                   </div>
+                   <div>
+                      <div className="font-mono text-[9px] uppercase text-white/40 mb-2">Status</div>
+                      <div className="flex items-center gap-2 font-display text-lg font-black text-accent italic">
+                         {proj.status}
+                      </div>
+                   </div>
+                </div>
+              </div>
+
+              {/* Action Circle */}
+              <div className="lg:col-span-4 flex flex-col items-start lg:items-end gap-8">
+                 <Link 
+                   to={`/projects/${proj.id}`}
+                   className="relative group/circle active:scale-95 transition-transform"
+                 >
+                    <div className="w-36 h-36 sm:w-48 sm:h-48 rounded-full border border-white/20 flex flex-col items-center justify-center group-hover/circle:bg-accent group-hover/circle:border-accent transition-all duration-500">
+                       <ArrowUpRight className="w-10 h-10 sm:w-12 sm:h-12 text-white group-hover/circle:text-black mb-2 transition-colors" />
+                       <span className="font-mono text-[9px] font-black uppercase text-white/40 group-hover/circle:text-black/60 tracking-widest">Detail View</span>
+                       <div className="absolute inset-0 rounded-full border border-accent opacity-0 group-hover/circle:opacity-100 group-hover/circle:scale-125 transition-all duration-700 pointer-events-none" />
+                    </div>
+                 </Link>
+                 
+                 <div className="flex gap-4 lg:opacity-30 lg:group-hover:opacity-100 opacity-100 transition-opacity">
+                    <a href={proj.link} target="_blank" rel="noreferrer" className="p-3.5 border border-white/10 rounded-full hover:bg-white hover:text-black transition-all min-h-[48px] min-w-[48px] flex items-center justify-center active:bg-white/10 active:scale-95">
+                       <Github className="w-5 h-5" />
+                    </a>
+                    <a href={proj.link} target="_blank" rel="noreferrer" className="p-3.5 border border-white/10 rounded-full hover:bg-white hover:text-black transition-all min-h-[48px] min-w-[48px] flex items-center justify-center active:bg-white/10 active:scale-95">
+                       <ExternalLink className="w-5 h-5" />
+                    </a>
+                 </div>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </section>
+
+      {/* Experimental Projects Small Grid */}
+      <section className="py-32 px-6 md:px-12 bg-white text-black">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-between mb-24">
+             <h3 className="font-display text-4xl font-black uppercase tracking-tighter">Micro-Prototypes</h3>
+             <div className="flex gap-2">
+                <Box className="w-6 h-6" />
+                <span className="font-mono text-xs font-bold uppercase tracking-widest text-black/40">Archive.V1</span>
+             </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+             {[
+               { name: 'LFR Robot', asset: '/assets/Project_Report_LFR.pdf' },
+               { name: 'Gesture Recognition', asset: '/assets/DanReality.pdf' },
+               { name: 'Port.folio V1', asset: '/assets/AI_Study_Assistant_Technical_Report.pdf' },
+               { name: 'Unity Sim', asset: '/assets/JanBroz_Performance.mp4' }
+             ].map((exp, i) => (
+                <a 
+                  key={i} 
+                  href="#" onClick={(e) => { e.preventDefault(); setActiveReport({ url: exp.asset, title: `${exp.name} Document` }); }}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="p-8 border-2 border-black flex flex-col justify-between aspect-video group hover:bg-black hover:text-accent transition-all duration-300"
+                >
+                   <div className="flex justify-between items-start">
+                     <div className="font-mono text-[10px] font-black uppercase opacity-30 group-hover:opacity-100 italic transition-all">0{i+4} // EXP</div>
+                     <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                   </div>
+                   <div className="font-display text-xl font-black uppercase leading-none">{exp.name}</div>
+                </a>
+              ))}
+          </div>
+        </div>
+      </section>
+
+      <AnimatePresence>
+        {activeReport && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex flex-col justify-between bg-black/95 backdrop-blur-md p-4 sm:p-6 outline-none"
+            role="dialog"
+            aria-modal="true"
+          >
+            {/* Modal Header */}
+            <div className="flex items-center justify-between w-full max-w-6xl mx-auto border-b border-white/10 pb-4 shrink-0">
+              <div className="flex flex-col pr-4">
+                <span className="font-mono text-[9px] uppercase text-[#00FF41] tracking-[0.3em] font-black">
+                  // DIGITAL_PROJECT_DOCUMENT_VIEWER
+                </span>
+                <h4 className="font-display text-base sm:text-lg md:text-xl font-black uppercase text-white tracking-tight mt-1 leading-tight">
+                  {activeReport.title}
+                </h4>
+              </div>
+
+              {/* Close Button */}
+              <button
+                onClick={() => setActiveReport(null)}
+                className="px-4 py-2 border border-white/10 text-white/70 hover:text-[#00FF41] hover:border-[#00FF41] rounded bg-white/5 hover:bg-[#00FF41]/5 transition-all active:scale-95 flex items-center justify-center gap-1.5 font-mono text-[11px] uppercase font-bold min-h-[48px] focus-visible:ring-2 focus-visible:ring-[#00FF41] outline-none shrink-0 cursor-pointer"
+                aria-label="Close modal"
+              >
+                <X className="w-4 h-4" />
+                <span>Close</span>
+              </button>
+            </div>
+
+            {/* Modal Body / Viewer Area */}
+            <div className="flex-1 flex items-center justify-center relative w-full max-w-6xl mx-auto my-4 overflow-hidden min-h-0">
+              {activeReport.url.endsWith(".mp4") ? (
+                <video
+                  src={activeReport.url}
+                  controls
+                  className="max-w-full max-h-full object-contain rounded border border-white/10 bg-black"
+                />
+              ) : (
+                <PDFViewer
+                  file={activeReport.url}
+                  title={activeReport.title}
+                />
+              )}
+            </div>
+
+            {/* Modal Footer */}
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 w-full max-w-6xl mx-auto border-t border-white/10 pt-4 shrink-0">
+              <div className="font-mono text-[9px] sm:text-xs text-zinc-400">
+                <span>PORTFOLIO DIGITAL RECORD SECURE ACCESS</span>
+              </div>
+              <div className="flex gap-2 w-full sm:w-auto">
+                <a
+                  href={activeReport.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 sm:flex-none px-5 py-3 bg-zinc-900 hover:bg-white text-zinc-300 hover:text-black border border-white/10 font-mono text-[10px] uppercase font-black tracking-widest flex items-center justify-center gap-1.5 rounded transition-all active:scale-95 min-h-[48px] focus-visible:ring-2 focus-visible:ring-[#00FF41] outline-none text-center"
+                >
+                  <ExternalLink className="w-3.5 h-3.5" /> New Tab
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}

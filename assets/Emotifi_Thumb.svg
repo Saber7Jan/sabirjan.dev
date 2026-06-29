@@ -1,0 +1,6 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#18181B"/>
+  <path d="M0 0L800 450M800 0L0 450" stroke="#EAB308" stroke-opacity="0.1"/>
+  <text x="400" y="225" font-family="Arial, sans-serif" font-size="40" fill="white" text-anchor="middle" font-weight="bold">EMOTIFI</text>
+  <text x="400" y="260" font-family="Arial, sans-serif" font-size="16" fill="#71717A" text-anchor="middle">WI-FI CSI EMOTION RECOGNITION</text>
+</svg>

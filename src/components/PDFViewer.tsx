@@ -10,27 +10,30 @@ export const PDFViewer: React.FC<PDFViewerProps> = ({ file, title = "Digital Doc
   const [isLoading, setIsLoading] = React.useState(true);
   const [hasError, setHasError] = React.useState(false);
 
-  // Robust base path handling
   const base = (import.meta.env.BASE || '/').replace(/\/$/, '');
   
   const cleanUrl = React.useMemo(() => {
     if (file.startsWith('http')) return file;
-    
     let path = file.startsWith('/') ? file : `/${file}`;
-    return base + path;
+    const fullUrl = base + path;
+    console.log("📍 PDF URL constructed:", fullUrl, "| BASE:", import.meta.env.BASE); // DEBUG
+    return fullUrl;
   }, [file, base]);
 
   const isPPTX = file.toLowerCase().endsWith(".pptx") || file.toLowerCase().endsWith(".ppt");
 
   let iframeSrc = `${cleanUrl}#toolbar=1&navpanes=1&scrollbar=1`;
-  
   if (isPPTX) {
-    iframeSrc = `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(cleanUrl)}&wdStartOn=0&wdAr=1.7777777777777777`;
+    iframeSrc = `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(cleanUrl)}`;
   }
 
-  const handleLoad = () => setIsLoading(false);
+  const handleLoad = () => {
+    setIsLoading(false);
+    console.log("✅ PDF loaded successfully");
+  };
+
   const handleError = () => {
-    console.error("PDF Load Error. URL:", cleanUrl); // For debugging
+    console.error("❌ PDF Load Failed. URL was:", cleanUrl);
     setHasError(true);
     setIsLoading(false);
   };
@@ -48,9 +51,6 @@ export const PDFViewer: React.FC<PDFViewerProps> = ({ file, title = "Digital Doc
 
         {hasError ? (
           <div className="flex flex-col items-center justify-center p-8 bg-zinc-900 border border-white/10 rounded-lg max-w-md text-center mx-4 z-10">
-            <div className="p-3 bg-red-500/10 rounded-full border border-red-500/30 mb-4 text-red-500">
-              <Loader2 className="w-8 h-8 animate-spin text-red-500" />
-            </div>
             <h5 className="font-display text-base font-black uppercase text-white">Failed to Load</h5>
             <p className="font-mono text-xs text-zinc-400 mt-2">Try New Tab or Download below</p>
           </div>
@@ -66,19 +66,16 @@ export const PDFViewer: React.FC<PDFViewerProps> = ({ file, title = "Digital Doc
           />
         )}
 
-        {/* Toolbar */}
         <div className="absolute bottom-4 right-4 left-4 sm:left-auto flex items-center justify-between sm:justify-start gap-4 z-10 bg-zinc-900/90 border border-white/15 px-3 py-2 rounded-lg backdrop-blur-md shadow-2xl transition-all duration-300">
           <div className="flex items-center gap-1.5 min-w-0">
             <div className="w-2 h-2 rounded-full bg-[#00FF41] animate-pulse shrink-0" />
             <span className="font-mono text-[9px] uppercase font-black text-zinc-300 tracking-wider truncate">{title}</span>
           </div>
           <div className="flex items-center gap-2">
-            <a href={cleanUrl} target="_blank" rel="noopener noreferrer"
-               className="px-2.5 py-1.5 text-[9px] font-mono uppercase font-black text-white hover:text-black hover:bg-[#00FF41] border border-white/10 hover:border-[#00FF41] rounded transition-all cursor-pointer flex items-center gap-1">
+            <a href={cleanUrl} target="_blank" rel="noopener noreferrer" className="px-2.5 py-1.5 text-[9px] font-mono uppercase font-black text-white hover:text-black hover:bg-[#00FF41] border border-white/10 hover:border-[#00FF41] rounded transition-all cursor-pointer flex items-center gap-1">
               <ExternalLink className="w-3 h-3" /> New Tab
             </a>
-            <a href={cleanUrl} download
-               className="px-2.5 py-1.5 text-[9px] font-mono uppercase font-black text-white hover:text-black hover:bg-[#00FF41] border border-white/10 hover:border-[#00FF41] rounded transition-all cursor-pointer flex items-center gap-1">
+            <a href={cleanUrl} download className="px-2.5 py-1.5 text-[9px] font-mono uppercase font-black text-white hover:text-black hover:bg-[#00FF41] border border-white/10 hover:border-[#00FF41] rounded transition-all cursor-pointer flex items-center gap-1">
               <Download className="w-3 h-3" /> Download
             </a>
           </div>

@@ -10,15 +10,22 @@ export const PDFViewer: React.FC<PDFViewerProps> = ({ file, title = "Digital Doc
   const [isLoading, setIsLoading] = React.useState(true);
   const [hasError, setHasError] = React.useState(false);
 
-  const base = (import.meta.env.BASE || '/').replace(/\/$/, '');
-  
   const cleanUrl = React.useMemo(() => {
-    if (file.startsWith('http')) return file;
-    let path = file.startsWith('/') ? file : `/${file}`;
-    const fullUrl = base + path;
-    console.log("📍 PDF URL constructed:", fullUrl, "| BASE:", import.meta.env.BASE); // DEBUG
-    return fullUrl;
-  }, [file, base]);
+  if (file.startsWith("http")) return file;
+
+  const base = import.meta.env.BASE_URL || "/";
+
+  const fullUrl = `${base}${file.replace(/^\/+/, "")}`;
+
+  console.log(
+    "📍 PDF URL constructed:",
+    fullUrl,
+    "| BASE:",
+    import.meta.env.BASE_URL
+  );
+
+  return fullUrl;
+}, [file]);
 
   const isPPTX = file.toLowerCase().endsWith(".pptx") || file.toLowerCase().endsWith(".ppt");
 

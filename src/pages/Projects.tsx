@@ -5,26 +5,28 @@ import { ArrowUpRight, Github, ExternalLink, Box, Zap, BarChart3, Target, FileTe
 import data from "../data.json";
 import { PDFViewer } from "../components/PDFViewer";
 
+const asset = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
+
 const getProjectCTALinks = (projId: string) => {
   switch (projId) {
     case "emotifi":
       return {
         demo: "https://youtu.be/mjasBI-TJkg",
-        report: "/assets/FYP_Research_Paper_SP25-37.pdf",
+        report: asset("assets/FYP_Research_Paper_SP25-37.pdf"),
         repo: "https://github.com/Saber7Jan/EmotiFi",
         pitch: "https://youtu.be/_DIFr9ggSxY"
       };
     case "danreality":
       return {
         demo: "https://saber7jan.github.io/JanBroz/",
-        report: "/assets/DanReality.pdf",
+        report: asset("assets/DanReality.pdf"),
         repo: "https://github.com/Saber7Jan/JanBroz",
         pitch: "https://youtu.be/jWUAvF0kO1I"
       };
     case "lfr-robot":
       return {
         demo: "",
-        report: "/assets/Project_Report_LFR.pdf",
+        report: asset("assets/Project_Report_LFR.pdf"),
         repo: "",
         pitch: ""
       };
@@ -32,7 +34,7 @@ const getProjectCTALinks = (projId: string) => {
     default:
       return {
         demo: "https://huggingface.co/spaces/Sabir7Jan/study-assistant-multi-agent-system",
-        report: "/assets/AI_Study_Assistant_Technical_Report.pdf",
+        report: asset("assets/AI_Study_Assistant_Technical_Report.pdf"),
         repo: "https://github.com/Saber7Jan/study-assistant-multi-agent-system",
         pitch: "https://youtu.be/vPE9Ox7FReY?si=FfWWu5ImomodfRms"
       };
@@ -289,10 +291,10 @@ export default function Projects() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
              {[
-               { name: 'LFR Robot', asset: '/assets/Project_Report_LFR.pdf' },
-               { name: 'Gesture Recognition', asset: '/assets/DanReality.pdf' },
-               { name: 'Port.folio V1', asset: '/assets/AI_Study_Assistant_Technical_Report.pdf' },
-               { name: 'Unity Sim', asset: '/assets/JanBroz_Performance.mp4' }
+               { name: 'LFR Robot', asset: asset("assets/Project_Report_LFR.pdf") },
+               { name: 'Gesture Recognition', asset: asset("assets/DanReality.pdf") },
+               { name: 'Port.folio V1', asset: asset("assets/AI_Study_Assistant_Technical_Report.pdf") },
+               { name: 'Unity Sim', asset: asset("assets/JanBroz_Performance.mp4") }
              ].map((exp, i) => (
                 <a 
                   key={i} 

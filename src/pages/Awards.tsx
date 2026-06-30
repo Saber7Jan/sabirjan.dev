@@ -5,6 +5,7 @@ import { Award, Download, ExternalLink, Filter, ChevronRight, FileText, BarChart
 import data from "../data.json";
 import { PDFViewer } from "../components/PDFViewer";
 
+const asset = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
 interface AwardItem {
   year: string;
   title: string;
@@ -211,10 +212,10 @@ export default function Awards() {
       location: "Islamabad, Pakistan",
       description: "Specialized in Computer Vision, signal processing, and embedded systems modeling.",
       buttons: [
-        { label: "Transcript", file: "/assets/Sabir_BS_CE_Result_Card.pdf", type: "pdf", isPrimary: true },
-        { label: "Result", file: "/assets/Sabir_BS_CE_Result_Card.pdf", type: "pdf", isPrimary: true },
-        { label: "English Cert", file: "/assets/English_language_Certificate.pdf", type: "pdf", isPrimary: false },
-        { label: "Character Cert", file: "/assets/character_certificate_Comsats.jpeg", type: "image", isPrimary: false }
+        { label: "Transcript", file: asset("assets/Sabir_BS_CE_Result_Card.pdf"), type: "pdf", isPrimary: true },
+        { label: "Result", file: asset("assets/Sabir_BS_CE_Result_Card.pdf"), type: "pdf", isPrimary: true },
+        { label: "English Cert", file: asset("assets/English_language_Certificate.pdf"), type: "pdf", isPrimary: false },
+        { label: "Character Cert", file: asset("assets/character_certificate_Comsats.jpeg"), type: "image", isPrimary: false }
       ]
     },
     {
@@ -224,10 +225,10 @@ export default function Awards() {
       location: "Gilgit, Pakistan",
       description: "Core pre-engineering coursework with high honors.",
       buttons: [
-        { label: "Certificate", file: "/assets/HSSC_Certificate.pdf", type: "pdf", isPrimary: true },
-        { label: "Transcript", file: "/assets/HSSC_Transcript.jpg", type: "image", isPrimary: true },
-        { label: "English Cert", file: "/assets/English_language_Certificate_AKHSS.pdf", type: "pdf", isPrimary: false },
-        { label: "Character Cert", file: "/assets/Character_Certificate.jpg", type: "image", isPrimary: false }
+        { label: "Certificate", file: asset("assets/HSSC_Certificate.pdf"), type: "pdf", isPrimary: true },
+        { label: "Transcript", file: asset("assets/HSSC_Transcript.jpg"), type: "image", isPrimary: true },
+        { label: "English Cert", file: asset("assets/English_language_Certificate_AKHSS.pdf"), type: "pdf", isPrimary: false },
+        { label: "Character Cert", file: asset("assets/Character_Certificate.jpg"), type: "image", isPrimary: false }
       ]
     },
     {
@@ -237,8 +238,8 @@ export default function Awards() {
       location: "Gilgit, Pakistan",
       description: "Science curriculum foundation studies.",
       buttons: [
-        { label: "Transcript", file: "/assets/SSC_Transcript.jpg", type: "image", isPrimary: true },
-        { label: "Certificate", file: "/assets/SSC_Certificate.jpg", type: "image", isPrimary: true }
+        { label: "Transcript", file: asset("assets/SSC_Transcript.jpg"), type: "image", isPrimary: true },
+        { label: "Certificate", file: asset("assets/SSC_Certificate.jpg"), type: "image", isPrimary: true }
       ]
     },
     {
@@ -249,7 +250,7 @@ export default function Awards() {
       isSpecial: true,
       description: "Prestigious recognition for active research contribution and collaborative scientific symposium participation hosted by the United States Embassy.",
       buttons: [
-        { label: "One Health Recognition", file: "/assets/US_Embassy_OneHealth.pdf", type: "pdf", isPrimary: true }
+        { label: "One Health Recognition", file: asset("assets/US_Embassy_OneHealth.pdf"), type: "pdf", isPrimary: true }
       ]
     }
   ];

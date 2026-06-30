@@ -120,7 +120,7 @@ export default function About() {
       title: "Machine Learning Specialization",
       issuer: "DeepLearning.AI & Andrew Ng",
       date: "Issued May 2026",
-      link: "/assets/NEW_CERTIFICATES.pdf",
+      link: `${import.meta.env.BASE_URL}assets/NEW_CERTIFICATES.pdf`,
     }
   ];
 
@@ -190,7 +190,7 @@ export default function About() {
                 {/* Cybernetic Biometric Portrait Container */}
                 <div className="relative w-full aspect-[1/1] sm:aspect-[3/4] mx-auto bg-black border border-white/5 overflow-hidden mb-2 rounded">
                   <img 
-                    src="/assets/Profie_Picture.JPG" 
+                    src={`${import.meta.env.BASE_URL}assets/Profie_Picture.JPG`} 
                     alt="Sabir Jan Portrait" 
                     className="w-full h-full object-cover object-top grayscale opacity-85"
                   />
@@ -291,7 +291,7 @@ export default function About() {
                 {/* Cybernetic Biometric Portrait Container */}
                 <div className="relative w-[150px] sm:w-[180px] md:w-full h-[180px] sm:h-[220px] md:h-auto md:aspect-[3/4] mx-auto bg-black border border-white/5 overflow-hidden mb-4 md:mb-6 group-hover:border-[#00FF41]/40 group-hover:shadow-[0_0_25px_rgba(0,255,65,0.25)] transition-all duration-500 rounded-lg">
                   <img 
-                    src="/assets/Profie_Picture.JPG" 
+                    src={`${import.meta.env.BASE_URL}assets/Profie_Picture.JPG`} 
                     alt="Sabir Jan Portrait" 
                     className="w-full h-full object-cover object-top grayscale opacity-85 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 font-sans"
                     onError={(e) => {
@@ -526,7 +526,7 @@ export default function About() {
 
               <div className="grid grid-cols-1 gap-4">
                 {certificates.map((cert, idx) => {
-                  const isLocal = cert.link.startsWith("/assets") || cert.link.startsWith("assets");
+                  const isLocal = cert.link.includes("/assets") || cert.link.includes("assets");
                   if (isLocal) {
                     return (
                       <button 

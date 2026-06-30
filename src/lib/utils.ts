@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-// Asset helper for GitHub Pages
+// Asset URL helper for GitHub Pages
 export const getAssetUrl = (path: string): string => {
   if (!path) return '';
   if (path.startsWith('http')) return path;
